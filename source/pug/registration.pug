@@ -1,0 +1,105 @@
+extends ./templates/base
+
+block variables
+	- var classBody = 'reg-page'
+	- var classWrapper = 'reg'
+
+block title
+	title Доставка
+
+block main
+	section.reg
+		.main-title
+			.container
+				ul
+					li Доставка
+						span 1
+					li Оплата
+						span 2
+		.reg__block
+			.container.reg__inner
+				.row
+					.col-sm-6
+						.reg__left
+							h3 Доставка
+								i 1
+							h4 Заполните поля ввода
+							form
+								.form-group
+									label(for="name") Имя*
+										input.form-control(type='text', name='name', id='name', required)
+								.form-group
+									label(for="surname") Фамилия*
+										input.form-control(type='text', name='surname', id='surname', required)
+								.form-group
+									label(for="email") E-mail*
+										input.form-control(type='text', name='email', id='email', required)
+								.form-group.field
+									label(for='phone') Номер телефона*
+									input#phone.form-control(type='text', name='phone', autofocus='true', placeholder='000 00 00 000',  required)
+								//- .form-group
+								//- 	label(for="tel") Номер телефона*
+								//- 		input.form-control(type='text', name='tel', id='tel', required)
+							.reg__address
+								h4 Адрес доставки
+								h5 Страна:
+									span United Kingdom, GBP
+								p.
+									Если вы хотите изменить страну доставки - перейдите в корзину и измените ее, используя селектор страны.
+					.col-sm-6
+						.reg__right
+							form
+								.form-group
+									label(for="address") Адрес*
+										input.form-control(type='text', name='address', id='address', required)
+								.form-group
+									label(for="city") Город*
+										input.form-control(type='text', name='city', id='city', required)
+								.form-group
+									label(for="district") Область*
+										input.form-control(type='text', name='district', id='district', required)
+								.form-group
+									label(for="index") Почтовый индекс*
+										input.form-control(type='text', name='index', id='index', required)
+								.form-group
+									.checkbox
+										label(for="remember") Использовать в качестве платежного адреса
+											input(type='checkbox', name='remember',  value='', id='remember')
+											span.checkbox__ok
+								h4 Создайте пароль
+								.form-group
+									label(for="pwd") Пароль*
+										input.form-control(type='text', name='pwd', id='pwd', required)
+								.form-group
+									label(for="repwd") Подтвердите пароль*
+										input.form-control(type='text', name='repwd', id='repwd', required)
+								button(type='submit').btn.btn-black Далее
+				.reg-card
+					.reg-card__block
+						.reg-card__main
+							h3 Ваша корзина
+							ul
+								mixin cardBox(num, img, name, text, code, price)
+									li.reg-card__box
+										.reg-card__num
+											span= num
+										.reg-card__img
+											img(src=require('../components/images/' + img + '.png'), alt= img)
+										.reg-card__info
+											h4.reg-card__name= name
+											p.reg-card__text= text
+											span.reg-card__code Код:
+												span= code
+											span.reg-card__price= price
+								+cardBox('1', 'product-1', 'Dorateymur', 'Gucci Cities print sweatshirt Ae tye-dye', '1234567890', '£ 1200')
+								+cardBox('2', 'product-1', 'Dorateymur', 'Gucci Cities print sweatshirt Ae tye-dye', '1234567890', '£ 1500')
+						.reg-card__total.clearfix
+							ul
+								li
+									p стоимость товаров:
+										span £ 2400
+									p доставка:
+										span £ 0
+								li
+									p.total всего к оплате:
+										span £ 2400

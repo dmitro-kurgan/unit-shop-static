@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Дизайнеры</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width, user-scalable=no">
+    <script>
+      function addActive(elem) {
+          var a = document.getElementsByClassName('word');
+          event.preventDefault();
+          for (i = 0; i < a.length; i++) {
+      		a[i].classList.remove('active');
+          }
+          elem.classList.add('active')
+      }
+    </script>
+  <link href="./css/style.css" rel="stylesheet"></head>
+  <body class="designers-page">
+    <div class="wrapper wrapper--designers">
+      <header>
+        <div class="header">
+          <div class="header__content">
+            <div class="header__top">
+              <div class="container">
+                <p>БЕСПЛАТНАЯ ЭКСПРЕСС-ПОСТАВКА НА ЗАКАЗЫ ОТ £ 250</p>
+              </div>
+            </div>
+            <div class="header__main">
+              <div class="container">
+                <div class="header__main-top">
+                  <div class="header__hamburger" id="hamburger"><span class="top"></span><span class="mid"></span><span class="bottom"></span></div>
+                  <div class="header__main-left">
+                    <ul class="clearfix">
+                      <li><a href="#">United Kingdom, GBP</a></li>
+                      <li><a href="#">Русский</a></li>
+                    </ul>
+                  </div>
+                  <div class="header__main-right">
+                    <ul class="clearfix">
+                      <li><a href="enter.html">Войти / Регистрация</a></li>
+                      <li><a href="favorite.html">Избранное</a></li>
+                      <li><a class="cart" href="#" data-toggle="modal" data-target="#cartWindow">Корзина<span class="cart-quantity count"></span></a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="header__logo"><a href="./"></a></div>
+              </div>
+            </div>
+            <div class="header__bottom" id="headerMenu">
+              <div class="container">
+                <div class="header__bottom-content">
+                  <div class="header__close" id="close"><span class="top"></span><span class="mid"></span><span class="bottom"></span></div>
+                  <div class="header__main header__main-mobile">
+                    <ul class="clearfix"></ul>
+                  </div>
+                  <div class="header__bottom-right header__search-mobile"></div>
+                  <div class="header__bottom-left">
+                    <ul class="nav nav-tabs">
+                                            <li class="active"><a href="#him" data-toggle="tab">Для него</a></li>
+                                            <li class=" "><a href="#her" data-toggle="tab">Для нее</a></li>
+                                            <li class=" "><a href="#children" data-toggle="tab">Для детей</a></li>
+                    </ul>
+                  </div>
+                  <div class="header__bottom-center">
+                    <div class="tab-content clearfix">
+                      <div class="tab-pane fade in active" id="him">
+                        <ul class="header-menu clearfix">
+                          <li class="header-menu__list"><a class="header-menu__link" href="category.html">Новинки</a></li>
+                          <li class="header-menu__list"><a class="header-menu__link" href="designers.html">Дизайнеры</a></li>
+                          <li class="header-menu__list menu-item-has-children"><a class="header-menu__link" href="#">Одежда</a>
+                            <div class="sub-menu">
+                              <ul class="sub-menu__content">
+                                <li class="sub-menu__list">
+                                  <ul class="sub-menu__brand">
+                                    <li>
+                                      <h5>Бренды</h5>
+                                    </li>
+                                    <li><a href="category.html">Aquazzura</a></li>
+                                    <li><a href="category.html">Casadei</a></li>
+                                    <li><a href="category.html">Coliac</a></li>
+                                    <li><a href="category.html">Gianvito Rossi</a></li>
+                                    <li><a href="category.html">Guidi</a></li>
+                                    <li><a href="category.html">Jimmy Choo</a></li>
+                                    <li><a href="category.html">Malone Souliers</a></li>
+                                    <li><a href="category.html">Neous</a></li>
+                                    <li><a href="category.html">Reike Nen</a></li>
+                                    <li><a href="category.html">Sophia Webster</a></li>
+                                    <li><a class="show-all" href="#">Смотреть все</a></li>
+                                  </ul>
+                                </li>
+                                <li class="sub-menu__list">
+                                  <ul class="sub-menu__category">
+                                    <li>
+                                      <h5>Категории</h5>
+                                    </li>
+                                    <li><a href="category.html">Платья</a></li>
+                                    <li><a href="category.html">Пальто</a></li>
+                                    <li><a href="category.html">Пуховики</a></li>
+                                    <li><a href="category.html">Куртки</a></li>
+                                    <li><a href="category.html">Парки</a></li>
+                                    <li><a href="category.html">Юбки</a></li>
+                                    <li><a href="category.html">Брюки</a></li>
+                                    <li><a href="category.html">Блузы</a></li>
+                                    <li><a href="category.html">Деним</a></li>
+                                    <li><a href="category.html">Свитеры</a></li>
+                                  </ul>
+                                </li>
+                                <li class="sub-menu__list sub-menu__trend">
+                                  <h5>Сейчас в тренде</h5>
+                                  <ul class="clearfix">
+                                                                      <li><a class="popular__box" href="product-pg.html">
+                                                                          <div class="popular__img"><img class="popular__pic" src="images/popular-1.png" alt="pic"><img class="popular__hidden" src="images/popular-2.png" alt="pic"></div>
+                                                                          <div class="popular__info">
+                                                                            <h3 class="popular__name">dorateymur</h3>
+                                                                            <div class="popular__text">
+                                                                              <p>Gucci Cities print sweatshirt</p>
+                                                                            </div>
+                                                                            <p class="popular__price">£ 1200</p>
+                                                                          </div></a></li>
+                                                                      <li><a class="popular__box" href="product-pg.html">
+                                                                          <div class="popular__img"><img class="popular__pic" src="images/popular-3.png" alt="pic"><img class="popular__hidden" src="images/popular-2.png" alt="pic"></div>
+                                                                          <div class="popular__info">
+                                                                            <h3 class="popular__name">dorateymur</h3>
+                                                                            <div class="popular__text">
+                                                                              <p>Gucci Cities print sweatshirt</p>
+                                                                            </div>
+                                                                            <p class="popular__price">£ 1200</p>
+                                                                          </div></a></li>
+                                                                      <li><a class="popular__box" href="product-pg.html">
+                                                                          <div class="popular__img"><img class="popular__pic" src="images/popular-4.png" alt="pic"><img class="popular__hidden" src="images/popular-2.png" alt="pic"></div>
+                                                                          <div class="popular__info">
+                                                                            <h3 class="popular__name">dorateymur</h3>
+                                                                            <div class="popular__text">
+                                                                              <p>Gucci Cities print sweatshirt</p>
+                                                                            </div>
+                                                                            <p class="popular__price">£ 1200</p>
+                                                                          </div></a></li>
+                                  </ul>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li class="header-menu__list"><a class="header-menu__link" href="category.html">Обувь</a></li>
+                          <li class="header-menu__list"><a class="header-menu__link" href="category.html">Аксессуары</a></li>
+                          <li class="header-menu__list"><a class="header-menu__link" href="blog.html">Статьи</a></li>
+                          <li class="header-menu__list"><a class="header-menu__link" href="sale.html">Распродажа</a></li>
+                        </ul>
+                      </div>
+                      <div class="tab-pane fade in" id="her">
+                        <ul class="header-menu">
+                                                  <li class="header-menu__list"><a class="header-menu__link" href="#">Новинки</a></li>
+                                                  <li class="header-menu__list"><a class="header-menu__link" href="#">Дизайнеры</a></li>
+                                                  <li class="header-menu__list"><a class="header-menu__link" href="#">Одежда</a></li>
+                                                  <li class="header-menu__list"><a class="header-menu__link" href="#">Обувь</a></li>
+                                                  <li class="header-menu__list"><a class="header-menu__link" href="#">Аксессуары</a></li>
+                                                  <li class="header-menu__list"><a class="header-menu__link" href="#">Статьи</a></li>
+                                                  <li class="header-menu__list"><a class="header-menu__link" href="#">Распродажа</a></li>
+                        </ul>
+                      </div>
+                      <div class="tab-pane fade in" id="children">
+                        <ul class="header-menu">
+                                                  <li class="header-menu__list"><a class="header-menu__link" href="#">Новинки</a></li>
+                                                  <li class="header-menu__list"><a class="header-menu__link" href="#">Дизайнеры</a></li>
+                                                  <li class="header-menu__list"><a class="header-menu__link" href="#">Одежда</a></li>
+                                                  <li class="header-menu__list"><a class="header-menu__link" href="#">Обувь</a></li>
+                                                  <li class="header-menu__list"><a class="header-menu__link" href="#">Аксессуары</a></li>
+                                                  <li class="header-menu__list"><a class="header-menu__link" href="#">Статьи</a></li>
+                                                  <li class="header-menu__list"><a class="header-menu__link" href="#">Распродажа</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="header__bottom-right header__search">
+                    <form>
+                      <div class="form-group">
+                        <input class="form-control" type="search" placeholder="ПОИСК" id="searchInput">
+                        <button class="fa fa-search" type="submit" id="searchIcon"></button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="content">
+        <section class="breadcrumb">
+          <div class="container">
+            <div class="breadcrumb__block">
+              <ul class="clearfix">
+                <li><a href="./">Главная</a></li>
+                <li>Дизайнеры A-Z</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="designers">
+          <div class="main-title">
+            <div class="container">
+              <h2>Дизайнеры A-Z</h2>
+            </div>
+          </div>
+          <div class="designers__block">
+            <div class="container-content">
+              <div class="designers__top">
+                <ul class="clearfix">
+                  <li><a class="word active" href="#A" data-toggle="#A" id="wordA" onclick="addActive(this)">A</a></li>
+                  <li><a class="word" href="#B" data-toggle="#B" id="wordB" onclick="addActive(this)">B</a></li>
+                  <li><a class="word" href="#C" data-toggle="#C" id="wordC" onclick="addActive(this)">C</a></li>
+                  <li><a class="word" href="#D" data-toggle="#D" id="wordD" onclick="addActive(this)">D</a></li>
+                  <li><a class="word" href="#E" data-toggle="#E" id="wordE" onclick="addActive(this)">E</a></li>
+                  <li><a class="word" href="#F" data-toggle="#F" id="wordF" onclick="addActive(this)">F</a></li>
+                  <li><a class="word" href="#G" data-toggle="#G" id="wordG" onclick="addActive(this)">G</a></li>
+                  <li><a class="word" href="#H" data-toggle="#H" id="wordH" onclick="addActive(this)">H</a></li>
+                  <li><a class="word" href="#I" data-toggle="#I" id="wordI" onclick="addActive(this)">I</a></li>
+                  <li><a class="word" href="#J" data-toggle="#J" id="wordJ" onclick="addActive(this)">J</a></li>
+                  <li><a class="word" href="#K" data-toggle="#K" id="wordK" onclick="addActive(this)">K</a></li>
+                  <li><a class="word" href="#L" data-toggle="#L" id="wordL" onclick="addActive(this)">L</a></li>
+                  <li><a class="word" href="#M" data-toggle="#M" id="wordM" onclick="addActive(this)">M</a></li>
+                  <li><a class="word" href="#N" data-toggle="#N" id="wordN" onclick="addActive(this)">N</a></li>
+                  <li><a class="word" href="#O" data-toggle="#O" id="wordO" onclick="addActive(this)">O</a></li>
+                  <li><a class="word" href="#P" data-toggle="#P" id="wordP" onclick="addActive(this)">P</a></li>
+                  <li><a class="word" href="#Q" data-toggle="#Q" id="wordQ" onclick="addActive(this)">Q</a></li>
+                  <li><a class="word" href="#R" data-toggle="#R" id="wordR" onclick="addActive(this)">R</a></li>
+                  <li><a class="word" href="#S" data-toggle="#S" id="wordS" onclick="addActive(this)">S</a></li>
+                  <li><a class="word" href="#T" data-toggle="#T" id="wordT" onclick="addActive(this)">T</a></li>
+                  <li><a class="word" href="#U" data-toggle="#U" id="wordU" onclick="addActive(this)">U</a></li>
+                  <li><a class="word" href="#V" data-toggle="#V" id="wordV" onclick="addActive(this)">V</a></li>
+                  <li><a class="word" href="#W" data-toggle="#W" id="wordW" onclick="addActive(this)">W</a></li>
+                  <li><a class="word" href="#X" data-toggle="#X" id="wordX" onclick="addActive(this)">X</a></li>
+                  <li><a class="word" href="#Y" data-toggle="#Y" id="wordY" onclick="addActive(this)">Y</a></li>
+                  <li><a class="word" href="#Z" data-toggle="#Z" id="wordZ" onclick="addActive(this)">Z</a></li>
+                  <li><a href="#">123</a></li>
+                </ul>
+              </div>
+              <div class="designers__main">
+                <ul class="designers__main-list clearfix">
+                  <li>
+                    <div class="designers__names active" id="A">
+                      <h4>A</h4>
+                      <ul>
+                        <li><a href="collection.html">A Peace Treaty</a></li>
+                        <li><a href="collection.html">Acne Studios</a></li>
+                        <li><a href="collection.html">Adam Lippes</a></li>
+                        <li><a href="collection.html">Adam Selman</a></li>
+                        <li><a href="collection.html">Adaptation</a></li>
+                        <li><a href="collection.html">ADEAM</a></li>
+                        <li><a href="collection.html">Alberta Ferretti</a></li>
+                        <li><a href="collection.html">Alexander McQueen</a></li>
+                        <li><a href="collection.html">Alexandra Golovanoff</a></li>
+                        <li><a href="collection.html">Alexia Hentsch</a></li>
+                        <li><a href="collection.html">All Things Mochi</a></li>
+                        <li><a href="collection.html">ALYX</a></li>
+                      </ul>
+                    </div>
+                                      <div class="designers__names" id="B">
+                                        <h4>B</h4>
+                                        <ul>
+                                          <li><a href="collection.html">Balenciaga</a></li>
+                                          <li><a href="collection.html">Balmain</a></li>
+                                          <li><a href="collection.html">Beau Souci</a></li>
+                                          <li><a href="collection.html">Beaufille</a></li>
+                                        </ul>
+                                      </div>
+                                      <div class="designers__names" id="C">
+                                        <h4>C</h4>
+                                        <ul>
+                                          <li><a href="collection.html">Calvin Klein 205W39NYC</a></li>
+                                          <li><a href="collection.html">Canada Goose</a></li>
+                                          <li><a href="collection.html">Caravana</a></li>
+                                          <li><a href="collection.html">Castañer</a></li>
+                                          <li><a href="collection.html">Cecilie Copenhagen</a></li>
+                                          <li><a href="collection.html">Céline Eyewear</a></li>
+                                          <li><a href="collection.html">Charm's</a></li>
+                                          <li><a href="collection.html">Chimi</a></li>
+                                          <li><a href="collection.html">Chloé Eyewear</a></li>
+                                          <li><a href="collection.html">Christian Louboutin</a></li>
+                                          <li><a href="collection.html">Christopher Kane</a></li>
+                                          <li><a href="collection.html">Church's</a></li>
+                                          <li><a href="collection.html">Comme des Garçons</a></li>
+                                          <li><a href="collection.html">Common Projects</a></li>
+                                        </ul>
+                                      </div>
+                  </li>
+                  <li>
+                                      <div class="designers__names" id="D">
+                                        <h4>D</h4>
+                                        <ul>
+                                          <li><a href="collection.html">Darmaki</a></li>
+                                          <li><a href="collection.html">Dax Gabler</a></li>
+                                          <li><a href="collection.html">De La Vali</a></li>
+                                          <li><a href="collection.html">Dior Eyewear</a></li>
+                                          <li><a href="collection.html">Dolce &amp; Gabbana</a></li>
+                                          <li><a href="collection.html">Dolce &amp; Gabbana </a></li>
+                                          <li><a href="collection.html">Dorateymur</a></li>
+                                          <li><a href="collection.html">Double Rainbouu</a></li>
+                                        </ul>
+                                      </div>
+                                      <div class="designers__names" id="E">
+                                        <h4>E</h4>
+                                        <ul>
+                                          <li><a href="collection.html">Ellery</a></li>
+                                          <li><a href="collection.html">Erdem</a></li>
+                                          <li><a href="collection.html">Esteban Cortazar</a></li>
+                                          <li><a href="collection.html">Etro</a></li>
+                                          <li><a href="collection.html">Eytys</a></li>
+                                        </ul>
+                                      </div>
+                                      <div class="designers__names" id="F">
+                                        <h4>F</h4>
+                                        <ul>
+                                          <li><a href="collection.html">Fabrizio Viti</a></li>
+                                          <li><a href="collection.html">Faith Connexion</a></li>
+                                          <li><a href="collection.html">Fendi</a></li>
+                                          <li><a href="collection.html">Fendi Eyewear</a></li>
+                                        </ul>
+                                      </div>
+                                      <div class="designers__names" id="G">
+                                        <h4>G</h4>
+                                        <ul>
+                                        </ul>
+                                      </div>
+                                      <div class="designers__names" id="H">
+                                        <h4>H</h4>
+                                        <ul>
+                                          <li><a href="collection.html">Haider Ackermann</a></li>
+                                          <li><a href="collection.html">Halpern</a></li>
+                                          <li><a href="collection.html">Haney</a></li>
+                                          <li><a href="collection.html">Helmut Lang</a></li>
+                                          <li><a href="collection.html">Heron Preston</a></li>
+                                          <li><a href="collection.html">Holiday</a></li>
+                                          <li><a href="collection.html">Huishan Zhang</a></li>
+                                        </ul>
+                                      </div>
+                  </li>
+                  <li>
+                                      <div class="designers__names" id="I">
+                                        <h4>I</h4>
+                                        <ul>
+                                          <li><a href="collection.html">A Peace Treaty</a></li>
+                                          <li><a href="collection.html">Acne Studios</a></li>
+                                          <li><a href="collection.html">Adam Lippes</a></li>
+                                          <li><a href="collection.html">Adam Selman</a></li>
+                                          <li><a href="collection.html">Adaptation</a></li>
+                                          <li><a href="collection.html">ADEAM</a></li>
+                                          <li><a href="collection.html">Alberta Ferretti</a></li>
+                                          <li><a href="collection.html">Alexander McQueen</a></li>
+                                          <li><a href="collection.html">Alexandra Golovanoff</a></li>
+                                          <li><a href="collection.html">Alexia Hentsch</a></li>
+                                          <li><a href="collection.html">All Things Mochi</a></li>
+                                          <li><a href="collection.html">ALYX</a></li>
+                                        </ul>
+                                      </div>
+                                      <div class="designers__names" id="J">
+                                        <h4>J</h4>
+                                        <ul>
+                                          <li><a href="collection.html">Balenciaga</a></li>
+                                          <li><a href="collection.html">Balmain</a></li>
+                                          <li><a href="collection.html">Beau Souci</a></li>
+                                          <li><a href="collection.html">Beaufille</a></li>
+                                        </ul>
+                                      </div>
+                                      <div class="designers__names" id="K">
+                                        <h4>K</h4>
+                                        <ul>
+                                          <li><a href="collection.html">Calvin Klein 205W39NYC</a></li>
+                                          <li><a href="collection.html">Canada Goose</a></li>
+                                          <li><a href="collection.html">Caravana</a></li>
+                                          <li><a href="collection.html">Castañer</a></li>
+                                          <li><a href="collection.html">Cecilie Copenhagen</a></li>
+                                          <li><a href="collection.html">Céline Eyewear</a></li>
+                                          <li><a href="collection.html">Charm's</a></li>
+                                          <li><a href="collection.html">Chimi</a></li>
+                                          <li><a href="collection.html">Chloé Eyewear</a></li>
+                                          <li><a href="collection.html">Christian Louboutin</a></li>
+                                          <li><a href="collection.html">Christopher Kane</a></li>
+                                          <li><a href="collection.html">Church's</a></li>
+                                          <li><a href="collection.html">Comme des Garçons</a></li>
+                                          <li><a href="collection.html">Common Projects</a></li>
+                                        </ul>
+                                      </div>
+                  </li>
+                  <li>
+                                      <div class="designers__names" id="L">
+                                        <h4>L</h4>
+                                        <ul>
+                                          <li><a href="collection.html">Darmaki</a></li>
+                                          <li><a href="collection.html">Dax Gabler</a></li>
+                                          <li><a href="collection.html">De La Vali</a></li>
+                                          <li><a href="collection.html">Dior Eyewear</a></li>
+                                          <li><a href="collection.html">Dolce &amp; Gabbana</a></li>
+                                          <li><a href="collection.html">Dolce &amp; Gabbana </a></li>
+                                          <li><a href="collection.html">Dorateymur</a></li>
+                                          <li><a href="collection.html">Double Rainbouu</a></li>
+                                        </ul>
+                                      </div>
+                                      <div class="designers__names" id="M">
+                                        <h4>M</h4>
+                                        <ul>
+                                        </ul>
+                                      </div>
+                                      <div class="designers__names" id="N">
+                                        <h4>N</h4>
+                                        <ul>
+                                        </ul>
+                                      </div>
+                                      <div class="designers__names" id="O">
+                                        <h4>O</h4>
+                                        <ul>
+                                          <li><a href="collection.html">Fabrizio Viti</a></li>
+                                          <li><a href="collection.html">Faith Connexion</a></li>
+                                          <li><a href="collection.html">Fendi</a></li>
+                                          <li><a href="collection.html">Fendi Eyewear</a></li>
+                                        </ul>
+                                      </div>
+                                      <div class="designers__names" id="P">
+                                        <h4>P</h4>
+                                        <ul>
+                                        </ul>
+                                      </div>
+                                      <div class="designers__names" id="Q">
+                                        <h4>Q</h4>
+                                        <ul>
+                                        </ul>
+                                      </div>
+                                      <div class="designers__names" id="R">
+                                        <h4>R</h4>
+                                        <ul>
+                                          <li><a href="collection.html">A Peace Treaty</a></li>
+                                          <li><a href="collection.html">Acne Studios</a></li>
+                                          <li><a href="collection.html">Adam Lippes</a></li>
+                                          <li><a href="collection.html">Adam Selman</a></li>
+                                          <li><a href="collection.html">Adaptation</a></li>
+                                          <li><a href="collection.html">ADEAM</a></li>
+                                          <li><a href="collection.html">Alberta Ferretti</a></li>
+                                          <li><a href="collection.html">Alexander McQueen</a></li>
+                                          <li><a href="collection.html">Alexandra Golovanoff</a></li>
+                                          <li><a href="collection.html">Alexia Hentsch</a></li>
+                                          <li><a href="collection.html">All Things Mochi</a></li>
+                                          <li><a href="collection.html">ALYX</a></li>
+                                        </ul>
+                                      </div>
+                  </li>
+                  <li>
+                                      <div class="designers__names" id="S">
+                                        <h4>S</h4>
+                                        <ul>
+                                          <li><a href="collection.html">Balenciaga</a></li>
+                                          <li><a href="collection.html">Balmain</a></li>
+                                          <li><a href="collection.html">Beau Souci</a></li>
+                                          <li><a href="collection.html">Beaufille</a></li>
+                                        </ul>
+                                      </div>
+                                      <div class="designers__names" id="T">
+                                        <h4>T</h4>
+                                        <ul>
+                                          <li><a href="collection.html">Calvin Klein 205W39NYC</a></li>
+                                          <li><a href="collection.html">Canada Goose</a></li>
+                                          <li><a href="collection.html">Caravana</a></li>
+                                          <li><a href="collection.html">Castañer</a></li>
+                                          <li><a href="collection.html">Cecilie Copenhagen</a></li>
+                                          <li><a href="collection.html">Céline Eyewear</a></li>
+                                          <li><a href="collection.html">Charm's</a></li>
+                                          <li><a href="collection.html">Chimi</a></li>
+                                          <li><a href="collection.html">Chloé Eyewear</a></li>
+                                          <li><a href="collection.html">Christian Louboutin</a></li>
+                                          <li><a href="collection.html">Christopher Kane</a></li>
+                                          <li><a href="collection.html">Church's</a></li>
+                                          <li><a href="collection.html">Comme des Garçons</a></li>
+                                          <li><a href="collection.html">Common Projects</a></li>
+                                        </ul>
+                                      </div>
+                                      <div class="designers__names" id="U">
+                                        <h4>U</h4>
+                                        <ul>
+                                        </ul>
+                                      </div>
+                                      <div class="designers__names" id="V">
+                                        <h4>V</h4>
+                                        <ul>
+                                        </ul>
+                                      </div>
+                                      <div class="designers__names" id="W">
+                                        <h4>W</h4>
+                                        <ul>
+                                        </ul>
+                                      </div>
+                                      <div class="designers__names" id="X">
+                                        <h4>X</h4>
+                                        <ul>
+                                        </ul>
+                                      </div>
+                                      <div class="designers__names" id="Y">
+                                        <h4>Y</h4>
+                                        <ul>
+                                        </ul>
+                                      </div>
+                                      <div class="designers__names" id="Z">
+                                        <h4>Z</h4>
+                                        <ul>
+                                        </ul>
+                                      </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+<footer>
+  <div class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <div class="row">
+          <div class="col-md-7">
+            <div class="footer__left">
+              <div class="footer__socials">
+                <ul>
+                  <li><a class="fa fa-facebook" href="#"></a></li>
+                  <li><a class="fa fa-telegram" href="#"></a></li>
+                  <li><a class="fa fa-twitter" href="#"></a></li>
+                </ul>
+              </div>
+              <div class="footer__menu">
+                <ul>
+                  <li>
+                    <h4>Unit Shop</h4>
+                  </li>
+                  <li><a href="about.html">О компании</a></li>
+                  <li><a href="#">Партнерская программа</a></li>
+                  <li><a href="blog.html">Блог</a></li>
+                  <li><a href="#">Гарантии от Unit Shop</a></li>
+                  <li><a href="designers.html">Дизайнеры от A до Z</a></li>
+                </ul>
+                <ul>
+                  <li>
+                    <h4>Обслуживание</h4>
+                  </li>
+                  <li><a href="contact.html">Помощь и контакты</a></li>
+                  <li><a href="how-to-buy.html">Заказы и доставка</a></li>
+                  <li><a href="#">Возврат товара</a></li>
+                  <li><a href="#">Самовывоз</a></li>
+                  <li><a href="faq.html">Вопросы и ответы</a></li>
+                </ul>
+                <ul>
+                  <li>
+                    <h4>Услуги</h4>
+                  </li>
+                  <li><a href="contact.html">Связаться с нами</a></li>
+                  <li><a href="#">История заказов</a></li>
+                  <li><a href="#">Закладки</a></li>
+                  <li><a href="cart-page.html">Корзина</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <div class="footer__right">
+              <div class="footer__logo"><a href="./"></a></div>
+              <form>
+                <div class="form-group">
+                  <input class="form-control" type="text" placeholder="Пожалуйста введите ваш email" name="email">
+                  <button class="btn" type="submit">Войти</button>
+                </div>
+              </form>
+              <div class="footer__copyright">
+                <p>© Copyright<span id="year"> </span>Unit Shop UK Limited. All rights reserved.	</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+      <div class="cart-window-window modal fade" id="cartWindow" role="dialog">
+        <div class="container">
+          <div class="modal-dialog cart-window__dialog">
+            <div class="modal-content cart-window__content">
+              <div class="modal-header cart-window__header">
+                <h4 class="cart-window__title">Корзина<span class="count"></span></h4>
+              </div>
+              <div class="modal-body cart-window__body">
+                <div class="cart-window__total">
+                  <p>Всего к оплате</p><span id="total"></span>
+                </div><a class="btn btn-black" href="registration.html">Оформить заказ</a>
+                <ul class="cart-window__goods">
+                                    <li class="cart-window__box">
+                                      <div class="cart-window__img"><img src="images/product-1.png" alt="product-1"></div>
+                                      <div class="cart-window__info">
+                                        <h5 class="cart-window__name">dorateymur</h5>
+                                        <p class="cart-window__size">Размер:<span>S</span></p>
+                                        <p class="cart-window__quantity">Количество:<span>1</span></p>
+                                      </div>
+                                      <div class="cart-window__price">
+                                        <p>£<span class="price">800</span></p>
+                                      </div><a class="cart-window__del-box" href="#"></a>
+                                    </li>
+                                    <li class="cart-window__box">
+                                      <div class="cart-window__img"><img src="images/product-1.png" alt="product-1"></div>
+                                      <div class="cart-window__info">
+                                        <h5 class="cart-window__name">dorateymur</h5>
+                                        <p class="cart-window__size">Размер:<span>S</span></p>
+                                        <p class="cart-window__quantity">Количество:<span>1</span></p>
+                                      </div>
+                                      <div class="cart-window__price">
+                                        <p>£<span class="price">600</span></p>
+                                      </div><a class="cart-window__del-box" href="#"></a>
+                                    </li>
+                                    <li class="cart-window__box">
+                                      <div class="cart-window__img"><img src="images/product-1.png" alt="product-1"></div>
+                                      <div class="cart-window__info">
+                                        <h5 class="cart-window__name">dorateymur</h5>
+                                        <p class="cart-window__size">Размер:<span>S</span></p>
+                                        <p class="cart-window__quantity">Количество:<span>1</span></p>
+                                      </div>
+                                      <div class="cart-window__price">
+                                        <p>£<span class="price">1200</span></p>
+                                      </div><a class="cart-window__del-box" href="#"></a>
+                                    </li>
+                </ul>
+              </div>
+              <div class="modal-footer cart-window__footer"><a href="#" data-dismiss="modal">Продолжить покупки</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <script type="text/javascript" src="js/bundle.js"></script></body>
+</html>

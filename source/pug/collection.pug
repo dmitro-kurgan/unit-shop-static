@@ -1,0 +1,195 @@
+extends ./templates/base
+
+block variables
+	- var classBody = 'collection-page'
+	- var classWrapper = 'collection'
+
+block title
+	title Мужская одежда
+
+block main
+	section.breadcrumb
+		.container
+			.breadcrumb__block
+				ul.clearfix
+					li
+						a(href='./') Главная
+					li
+						a(href='./') Для него
+					li.
+						Одежда
+	section.category
+		.container
+			.main-title
+				h2 женкая колекция Helmut Lang
+				p.text-overflow
+					| Established in 1986, Helmut Lang is one of the fashion’s most influential brands, known for its pioneering minimalism, engagement with
+				a(href="#") Читать еще
+		.container
+			.row
+				.col-xs-12.col-sm-7.col-sm-push-5.col-md-8.col-md-push-4.col-lg-9.col-lg-push-3
+					.category__right
+						.category__head
+							.category__head-left
+								p Сортировать:
+								select.selectpicker.custom-picker(title='Сначала новые', required)
+									option(value='Сначала новые') Сначала новые
+									option(value='Сначала старые') Сначала старые
+									option(value='Популярные') Популярные
+									option(value='Рейтинг') Рейтинг
+							.category__head-right
+								.pagination
+									a(href="#").prev
+									p.page Страница
+									span.current 1
+									p.total из 7
+									a(href="#").next
+						.category__main
+							mixin categoryBox(link, img, hidden, name, text, price)
+								li.col-md-4
+									.popular__box
+										a(href='#').popular__star
+											span.fa.fa-star
+										.popular__img
+											img(src=require('../components/images/' + img + '.png'), class='popular__pic', alt='pic')
+											img(src=require('../components/images/' + hidden + '.png'), class='popular__hidden', alt='pic')
+											.popular__size
+												.slider.slick-size
+													div
+														a(href= link).slick-size__box XS
+													div
+														a(href= link).slick-size__box S
+													div
+														a(href= link).slick-size__box M
+													div
+														a(href= link).slick-size__box L
+													div
+														a(href= link).slick-size__box XL
+													div
+														a(href= link).slick-size__box XXL
+										.popular__info
+											h3.popular__name= name
+											.popular__text
+												p= text
+											p.popular__price= price
+							ul.row
+								+categoryBox('product-pg.html', 'popular-1', 'popular-2', 'dorateymur', 'Gucci Cities print sweatshirt', '£ 1200')
+								+categoryBox('product-pg.html', 'popular-3', 'popular-2', 'dorateymur', 'Gucci Cities print sweatshirt', '£ 1200')
+								+categoryBox('product-pg.html', 'popular-4', 'popular-2', 'dorateymur', 'Gucci Cities print sweatshirt', '£ 1200')
+								+categoryBox('product-pg.html', 'popular-5', 'popular-2', 'dorateymur', 'Gucci Cities print sweatshirt', '£ 1200')
+								+categoryBox('product-pg.html', 'popular-6', 'popular-2', 'dorateymur', 'Gucci Cities print sweatshirt', '£ 1200')
+								+categoryBox('product-pg.html', 'popular-6', 'popular-2', 'dorateymur', 'Gucci Cities print sweatshirt', '£ 1200')
+						.category__bottom
+							.category__bottom-left
+								.category__choose-sort
+									p Сортировать:
+									select.selectpicker.custom-picker.custom-picker-sort(title='Сначала новые', required)
+										option(value='Сначала новые') Сначала новые
+										option(value='Сначала старые') Сначала старые
+										option(value='Популярные') Популярные
+										option(value='Рейтинг') Рейтинг
+								.category__choose-size
+									p Показать:
+									select.selectpicker.custom-picker.custom-picker-size(title='60', required)
+										option(value='60') 60
+										option(value='62') 62
+										option(value='64') 64
+										option(value='66') 66
+										option(value='68') 68
+							.category__bottom-right
+								.pagination
+									a(href="#").prev
+									p.page Страница
+									span.current 1
+									p.total из 7
+									a(href="#").next
+						include ./modules/recomend
+				.col-xs-12.col-sm-5.col-sm-pull-7.col-md-4.col-md-pull-8.col-lg-3.col-lg-pull-9
+					.category__left
+						form
+							.category__find
+								p Найдено:
+									span 400 товаров
+							.category__sort
+								p Отсортировать по:
+								a(href="#") очистить все
+							#accordion.panel-group
+								.panel.panel-default
+									.panel-heading
+										h4.panel-title
+											a(data-toggle='collapse', data-parent='#accordion', href='#collapse1', aria-expanded="false")
+												| Показать новинки
+												object
+													a(href='#').clear Очистить
+									#collapse1.panel-collapse.collapse
+										.panel-body
+											p Новинки
+								.panel.panel-default
+									.panel-heading
+										h4.panel-title
+											a(data-toggle='collapse', data-parent='#accordion', href='#collapse2', aria-expanded="true")
+												| Цвет
+												object
+													a(href='#').clear Очистить
+									#collapse2.panel-collapse.collapse.in
+										.panel-body
+											.scrollbar-inner
+												mixin checkbox(className, forname, nameGroup, name, id)
+													div(class="checkbox" + ' ' + className)
+														label(for= forname)
+															input(type='checkbox', name= nameGroup, value='', id= id)
+															span.checkbox__ok
+															|
+															= name
+												.checkbox
+													label(for='color1')
+														input(type='checkbox', name='color', value='', id='color1', checked)
+														span.checkbox__ok
+														| Черный
+												+checkbox('none', 'color2', 'color', 'Белый', 'color2')
+												+checkbox('', 'color3', 'color', 'Бирюзовый', 'color3')
+												+checkbox('', 'color4', 'color', 'Зеленый', 'color4')
+												+checkbox('', 'color5', 'color', 'Коричневый', 'color5')
+												+checkbox('none', 'color6', 'color', 'Красный', 'color6')
+												+checkbox('', 'color7', 'color', 'Кремовый', 'color7')
+												+checkbox('', 'color8', 'color', 'Оранжевый', 'color8')
+												+checkbox('', 'color9', 'color', 'Разноцветный', 'color9')
+								.panel.panel-default
+									.panel-heading
+										h4.panel-title
+											a(data-toggle='collapse', data-parent='#accordion', href='#collapse3', aria-expanded="false")
+												| Дизайнеры
+												object
+													a(href='#').clear Очистить
+									#collapse3.panel-collapse.collapse
+										.panel-body
+											+checkbox('', 'designers2', 'designers', 'Ив Сен-Лоран', 'designers2')
+											+checkbox('none', 'designers3', 'designers', 'Луи Вюиттон', 'designers3')
+											+checkbox('', 'designers4', 'designers', 'Пьер Карден', 'designers4')
+											+checkbox('none', 'designers5', 'designers', 'Гуччи', 'designers5')
+											+checkbox('', 'designers6', 'designers', 'Дольче и Габбана', 'designers6')
+								.panel.panel-default
+									.panel-heading
+										h4.panel-title
+											a(data-toggle='collapse', data-parent='#accordion', href='#collapse4', aria-expanded="false")
+												| Размеры
+												object
+													a(href='#').clear Очистить
+									#collapse4.panel-collapse.collapse
+										.panel-body
+											+checkbox('', 'size2', 'size', 'XS', 'size2')
+											+checkbox('', 'size3', 'size', 'S', 'size3')
+											+checkbox('', 'size4', 'size', 'M', 'size4')
+											+checkbox('', 'size5', 'size', 'L', 'size5')
+											+checkbox('', 'size6', 'size', 'XL', 'size6')
+											+checkbox('none', 'size7', 'size', 'XXL', 'size7')
+								.panel.panel-default
+									.panel-heading
+										h4.panel-title
+											a(data-toggle='collapse', data-parent='#accordion', href='#collapse5', aria-expanded="false")
+												| Цена
+												object
+													a(href='#').clear Очистить
+									#collapse5.panel-collapse.collapse
+										.panel-body
+											p Дорого

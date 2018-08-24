@@ -1,0 +1,45 @@
+- var json = require('../../data/nav.json')
+footer
+	.footer
+		.container
+			.footer__content
+				.row
+					.col-md-7
+						.footer__left
+							.footer__socials
+								ul
+									each link, className in json.navSocials
+										li
+											a(href= link, class='fa fa-' + className)
+							.footer__menu
+								ul
+									li
+										h4 Unit Shop
+									each link, title in json.navFooterFirst
+										li
+											a(href= link)= title
+								ul
+									li
+										h4 Обслуживание
+									each link, title in json.navFooterSecond
+										li
+											a(href= link)= title
+								ul
+									li
+										h4 Услуги
+									each link, title in json.navFooterThirth
+										li
+											a(href= link)= title
+					.col-md-5
+						.footer__right
+							.footer__logo
+								a(href="./")
+							form
+								.form-group
+									input.form-control(type='text', placeholder='Пожалуйста введите ваш email', name='email')
+									button(type='submit').btn Войти
+							.footer__copyright
+								p
+									|© Copyright
+									span#year 
+									| Unit Shop UK Limited. All rights reserved.	

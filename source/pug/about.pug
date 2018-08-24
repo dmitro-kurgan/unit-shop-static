@@ -1,0 +1,38 @@
+extends ./templates/base
+
+block variables
+	- var classBody = 'about-page'
+	- var classWrapper = 'about'
+
+block title
+	title О нас
+
+block main
+	section.breadcrumb
+		.container
+			.breadcrumb__block
+				ul.clearfix
+					li
+						a(href='./') Главная
+					li.
+						О Unit Shop
+	section.about
+		.about__banner(style='background-image: url(' + require("../components/images/about-banner.jpg") + ')')
+		.container
+			.main-title
+				h2 О Unit Shop
+		.about__block
+			.container
+				.about__box
+					h4 Добро пожаловать в Lorem ipsum dolor
+					p.
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porttitor faucibus nisi consectetur viverra. Etiam diam lectus, commodo nec mauris ege vestibulum aliquet libero. Morbi sed volutpat justo. Donec ac augue mollis turpis vestibulum blandit eu quis purus. Sed varius elementum velit, et tr istique massa congue nec. Praesent orci velit, vehicula sed sem in, placerat consequat tellus. Donec malesuada sed enim sit amet scelerisque. Curabitu aliquam a lectus et lacinia
+				.about__box
+					h4 Sed tincidunt malesuada posuere
+					p.
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porttitor faucibus nisi consectetur viverra. Etiam diam lectus, commodo nec mauris ege t, vestibulum aliquet libero. Morbi sed volutpat justo. Donec ac augue mollis turpis vestibulum blandit eu quis purus. Sed varius elementum velit, et t ristique massa congue nec. Praesent orci velit, vehicula sed sem in, placerat consequat tellus. Donec malesuada sed enim sit amet scelerisque. Curabitur aliquam a lectus et lacinia. Duis consequat risus nec tellus aliquam, vel aliquet leo dignissim. Vivamus tincidunt odio nunc, in ornare massa aliquet at. Praesent et hendrerit mi. Aenean magna dolor, aliquet ac finibus et, rutrum vitae elit. Ut auctor felis eu dui tincidunt, id molestie turpis tincidunt.
+				.about__box
+					h4 Nterdum et malesuada fames ac ante ipsum
+					p.
+						Sed sit amet turpis rutrum libero vehicula mollis. Fusce accumsan massa porta erat consequat dignissim. Quisque ac fringilla dui, in faucibus purus. Vestibulum faucibus enim vitae eros pharetra pulvinar. Aliquam et venenatis leo, quis convallis massa. Fusce aliquet purus est, non suscipit risus semper et. Pellentesque gravida tellus magna, vitae cursus ipsum eleifend vehicula. Aliquam varius semper eleifend. Donec ultricies lectus et mauris tincidunt, vel tincidunt lorem consequat. Nulla facilisi. Phasellus vel ex placerat dui mattis tincidunt eget eget odio.
+				a(href="./") перейти в магазин Unit Shop

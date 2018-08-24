@@ -1,0 +1,155 @@
+extends ./templates/base
+
+block variables
+	- var classBody = 'product-page'
+	- var classWrapper = 'product-pg'
+
+block title
+	title Страница товара
+
+block main
+	section.breadcrumb
+		.container-content
+			.breadcrumb__block
+				ul.clearfix
+					li
+						a(href='./') Главная
+					li
+						a(href='./') Для него
+					li
+						a(href='category.html') Одежда
+					li.
+						Название товара
+	section.product-pg
+		.product-pg__block
+			.container-content
+				.row
+					.product-pg__left.col-sm-6
+						.slider.slick-productNav
+							mixin productNav(img)
+								div
+									.slick-productNav__box
+										.slick-productNav__img
+											img(src=require('../components/images/' + img + '.jpg'), alt='pic')
+							+productNav('product-1')
+							+productNav('product-2')
+							+productNav('product-3')
+							+productNav('product-4')
+							+productNav('product-1')
+							+productNav('product-2')
+							+productNav('product-3')
+							+productNav('product-4')
+						.slider.slick-productFor
+							mixin productFor(img)
+								div
+									.slick-productFor__box
+										.slick-productFor__img
+											img(src=require('../components/images/' + img + '.jpg'), alt='pic')
+							+productFor('product-1')
+							+productFor('product-2')
+							+productFor('product-3')
+							+productFor('product-4')
+							+productFor('product-1')
+							+productFor('product-2')
+							+productFor('product-3')
+							+productFor('product-4')
+					.product-pg__right.col-sm-6
+						.product-pg__head
+							h2 dorateymur
+							p.
+								Gucci Cities print sweatshirt
+							span.price £ 1200
+							a(href="#") Новый сезон
+							span.limit Количество ограничено
+						.product-pg__info.clearfix
+							.product-pg__info-left
+								p Размер
+								a(href="#").table-size Таблица Размеров
+								select.selectpicker.custom-picker(title='Выберите размер', required)
+									- var sizeNum = ['44', '48', '52', '56', '60']
+									each name in sizeNum
+										option(value= name)= name
+								a(href="#").btn.add-to-cart Добавить в корзину
+									span
+							.product-pg__info-right
+								p Количество
+								.product-pg__quantity
+									span.plus +
+									input.input(value='1')
+									span.minus -
+								a(href="#").btn.add-to-featured Добавить в избранное
+									span.fa.fa-star
+						.product-pg__accordion
+							#accordion.panel-group
+								.panel.panel-default
+									.panel-heading
+										h4.panel-title
+											a(data-toggle='collapse', data-parent='#accordion', href='#collapse1', aria-expanded="false")
+												| Описание
+									#collapse1.panel-collapse.collapse
+										.panel-body
+											p.
+												A relaxed hoodie sweatshirt with the Gucci stripe down the sleeves. Streetwear continues to be a defining feature of Gucci's collections and is often juxtaposed by tailored separates.
+											ul
+												li
+													p Grey felted cotton jersey
+												li
+													p Gucci jacquard stripe on the sleeves
+												li
+													p Fixed hood with drawstring
+												li
+													p 100% cotton
+								.panel.panel-default
+									.panel-heading
+										h4.panel-title
+											a(data-toggle='collapse', data-parent='#accordion', href='#collapse2', aria-expanded="false")
+												| Состав и уход
+									#collapse2.panel-collapse.collapse
+										.panel-body
+											p.
+												A relaxed hoodie sweatshirt with the Gucci stripe down the sleeves. Streetwear continues to be a defining feature of Gucci's collections and is often juxtaposed by tailored separates.
+								.panel.panel-default
+									.panel-heading
+										h4.panel-title
+											a(data-toggle='collapse', data-parent='#accordion', href='#collapse3', aria-expanded="false")
+												| Доставка
+									#collapse3.panel-collapse.collapse
+										.panel-body
+											p.
+												A relaxed hoodie sweatshirt with the Gucci stripe down the sleeves. Streetwear continues to be a defining feature of Gucci's collections and is often juxtaposed by tailored separates.
+								.panel.panel-default
+									.panel-heading
+										h4.panel-title
+											a(data-toggle='collapse', data-parent='#accordion', href='#collapse4', aria-expanded="false")
+												| Дизайнер
+									#collapse4.panel-collapse.collapse
+										.panel-body
+											p.
+												A relaxed hoodie sweatshirt with the Gucci stripe down the sleeves. Streetwear continues to be a defining feature of Gucci's collections and is often juxtaposed by tailored separates.
+						.product-pg__info-code
+							p Больше информации о
+								a(href="#") Доставке
+							p Код товара:
+								span #1234567890
+		.container-content
+			include ./modules/recomend
+		.product-pg__bottom
+			.container-content
+				ul.row
+					li.col-sm-4
+						div
+							h6 Возврат
+							p Бесплатный возврат в течении 28 дней
+							a(href="#") Подробнее
+					li.col-sm-4
+						div
+							h6 доставка
+							p.
+								Узнайте, какие варианты доставки доступны для вашего пункта назначения
+							a(href="#") Читать
+					li.col-sm-4
+						div
+							h6 персональная покупка
+							p.
+								Нужна помощь с вашим заказом или советом ?
+							a(href="contact.html") Связаться с нами

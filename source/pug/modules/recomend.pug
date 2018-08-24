@@ -1,0 +1,31 @@
+.recomend
+	ul.nav.nav-tabs
+		li.active
+			a(href="#recomend", data-toggle='tab') Рекомендации
+		li
+			a(href="#viewed", data-toggle='tab') Вы просматривали
+	mixin recomendBox(link, img, hidden, name, text, price)
+		div
+			a(href= link).popular__box
+				.popular__img
+					img(src=require('../components/images/' + img + '.png'), class='popular__pic', alt='pic')
+					img(src=require('../components/images/' + hidden + '.png'), class='popular__hidden', alt='pic')
+				.popular__info
+					h3.popular__name= name
+					.popular__text
+						p= text
+					p.popular__price= price
+	.tab-content
+		#recomend.tab-pane.fade.in.active
+			.slider.slick-recomend
+				- var recbox = 12
+				- for(var i = 0; i < recbox; i++) {
+					+recomendBox('product-pg.html', 'popular-1', 'popular-2', 'dorateymur', 'Gucci Cities print sweatshirt', '£ 1200')
+				- }
+			.slideruiRecomend
+		#viewed.tab-pane.fade.in
+			.slider.slick-viewed
+				- for(var i = 0; i < recbox; i++) {
+					+recomendBox('product-pg.html', 'popular-1', 'popular-2', 'dorateymur', 'Gucci Cities print sweatshirt', '£ 1200')
+				- }
+			.slideruiViewed

@@ -1,0 +1,69 @@
+{
+  "navPages": {
+    "Новинки" : "category.html",
+    "Дизайнеры" : "designers.html"
+  },
+
+  "navPages2": {
+    "Обувь" : "category.html",
+    "Аксессуары" : "category.html",
+    "Статьи" : "blog.html",
+    "Распродажа" : "sale.html"
+  },
+
+  "navFooterFirst": {
+    "О компании": "about.html",
+    "Партнерская программа": "#",
+    "Блог": "blog.html",
+    "Гарантии от Unit Shop": "#",
+    "Дизайнеры от A до Z": "designers.html"
+  },
+
+  "navFooterSecond": {
+    "Помощь и контакты": "contact.html",
+    "Заказы и доставка": "how-to-buy.html",
+    "Возврат товара": "#",
+    "Самовывоз": "#",
+    "Вопросы и ответы": "faq.html"
+  },
+
+  "navFooterThirth": {
+    "Связаться с нами": "contact.html",
+    "История заказов": "#",
+    "Закладки": "#",
+    "Корзина": "cart-page.html"
+  },
+
+  "navSocials": {
+    "facebook": "#",
+    "telegram": "#",
+    "twitter": "#"
+  },
+
+  "brands": {
+    "Aquazzura": "category.html",
+    "Casadei": "category.html",
+    "Coliac": "category.html",
+    "Gianvito Rossi": "category.html",
+    "Guidi": "category.html",
+    "Jimmy Choo": "category.html",
+    "Malone Souliers": "category.html",
+    "Neous": "category.html",
+    "Reike Nen": "category.html",
+    "Sophia Webster": "category.html",
+    "Jimmy Choo": "category.html"
+  },
+
+  "categories": {
+    "Платья": "category.html",
+    "Пальто": "category.html",
+    "Пуховики": "category.html",
+    "Куртки": "category.html",
+    "Парки": "category.html",
+    "Юбки": "category.html",
+    "Брюки": "category.html",
+    "Блузы": "category.html",
+    "Деним": "category.html",
+    "Свитеры": "category.html"
+  }
+}

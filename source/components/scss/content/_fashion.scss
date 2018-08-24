@@ -1,0 +1,55 @@
+.wrapper {
+	&--fashion {
+		/* bootstrap hack: fix content width inside hidden tabs */
+		.tab-content > .tab-pane,
+		.pill-content > .pill-pane {
+		    display: block;     /* undo display:none          */
+		    height: 0;          /* height:0 is also invisible */ 
+		    overflow: hidden;
+		}
+		.tab-content > .active,
+		.pill-content > .active {
+		    height: auto;       /* let the content decide it  */
+		} /* bootstrap hack end */
+		.banner {
+			padding-top: 0px;
+			&__img {
+				min-height: 420px;
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: center;
+				position: relative;
+			}
+			&__inner {
+				bottom: 0px;
+				padding: 32px 0;
+				background-color: rgba(0, 0, 0, 0.5);
+				h1 {
+					font-size: 40px;
+					@media #{$mobile} {
+					    font-size: 27px;
+					}
+				}
+				p {
+					font-size: 20px;
+					@media #{$mobile} {
+						font-size: 16px;
+					}
+				}
+			}
+		}
+		.main-title {
+			text-align: left;
+			p {
+				margin: 12px 0 20px 0;
+				font-size: 13px;
+			}
+			span {
+				text-transform: uppercase;
+				font-weight: 600;
+				margin-right: 5px;
+				margin-left: 5px;
+			}
+		}
+	}
+}

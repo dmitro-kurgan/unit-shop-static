@@ -1,0 +1,60 @@
+extends ./templates/base
+
+block variables
+	- var classBody = 'pay-page'
+	- var classWrapper = 'pay'
+
+block title
+	title Оплата
+
+block main
+	section.pay
+		.main-title
+			.container
+				ul
+					li Доставка
+						span 1
+					li Оплата
+						span 2
+		.pay__block
+			.container.pay__inner
+				.row
+					.col-sm-6
+						.pay__left
+							h3 Оплата
+								i 2
+							h4 Награды + акции
+							form
+								.form-group
+									label(for="promo") Введите промо код
+										input.form-control(type='text', name='promo', id='promo')
+								a(href='#').btn.btn-black Сохранить
+								.form-group
+									p Способ оплаты*
+									select.selectpicker.custom-picker(title='Master Card', required)
+										option(value='Master Card') Master Card
+										option(value='Master Card') Master Card
+										option(value='Master Card') Master Card
+										option(value='Master Card') Master Card
+					.col-sm-6
+						.pay__right
+							form
+								.form-group
+									label(for="card") Номер карты*
+										input.form-control(type='text', name='card', id='card', required)
+								.form-group
+									p Срок годности*
+									select.selectpicker.custom-picker(title='Месяц', required)
+										option(value='Сентябрь') Сентябрь
+										option(value='Октябрь') Октябрь
+										option(value='Ноябрь') Ноябрь
+										option(value='Декабрь') Декабрь
+									select.selectpicker.custom-picker(title='Год', required)
+										option(value='2018') 2018
+										option(value='2019') 2019
+										option(value='2020') 2020
+								.form-group
+									label(for="security") Код безопасности*
+										input.form-control(type='text', name='security', id='security', required)
+								button(type='submit').btn.btn-black Готово
+								a(href='#').btn Назад

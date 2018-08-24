@@ -1,0 +1,53 @@
+extends ./templates/base
+
+block variables
+	- var classBody = 'enter-page'
+	- var classWrapper = 'enter'
+
+block title
+	title Вход
+
+block main
+	section.breadcrumb
+		.container
+			.breadcrumb__block
+				ul.clearfix
+					li
+						a(href='./') Главная
+					li.
+						Вход в аккаунт
+	section.enter
+		.container
+			.main-title
+				h2 Вход в аккаунт
+		.enter__block
+			.container.enter__inner
+				.row
+					.col-sm-6
+						.enter__left
+							h3 Зарегистрированный клиент
+							p.
+								Если у вас уже есть аккаунт, войдите в систему
+							form
+								.form-group
+									label(for="email") E-MAIL*
+										input.form-control(type='text', name='email', id='email')
+								.form-group
+									label(for="pwd") ПАРОЛЬ*
+										input.form-control(type='text', name='pwd', id='pwd')
+								.form-group
+									.checkbox
+										label(for="remember") Запомнить меня
+											input(type='checkbox', name='remember',  value='', id='remember')
+											span.checkbox__ok
+								button(type='submit').btn.btn-black Войти и продолжить
+								a(href='#').forgot-pwd Забыли пароль?
+					.col-sm-6
+						.enter__right
+							h3 Новый клиент
+							p.
+								Первый раз совершаете покупку на Unit Shop? Введите свой e-mail, чтобы продолжить.
+							a(href="registration.html").btn.btn-black Зарегистрироваться
+							p Или авторизуйтесь с помощью...
+							a(href="#").btn.btn-fb Facebook
+								i.fa.fa-facebook

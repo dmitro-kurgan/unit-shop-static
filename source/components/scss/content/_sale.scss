@@ -1,0 +1,95 @@
+.wrapper {
+	&--sale {
+		/* bootstrap hack: fix content width inside hidden tabs */
+		.tab-content > .tab-pane,
+		.pill-content > .pill-pane {
+		    display: block;     /* undo display:none          */
+		    height: 0;          /* height:0 is also invisible */ 
+		    overflow: hidden;
+		}
+		.tab-content > .active,
+		.pill-content > .active {
+		    height: auto;       /* let the content decide it  */
+		} /* bootstrap hack end */
+		.banner {
+			padding-top: 0px;
+			&__img {
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: center;
+				@media #{$mobile} {
+					background-position: 100%;
+				}
+			}
+			&__inner {
+				position: relative;
+				min-height: 420px;
+				padding: 45px 0 45px 0;
+				bottom: 0px;
+				@media screen and(max-width: 500px) {
+					min-height: 325px;
+					padding: 20px 0 20px 0;
+				}
+				h1 {
+					@media screen and(max-width: 500px) {
+						font-size: 18px;
+					}
+				}
+				p {
+					font-size: 20px;
+				}
+			}
+			&__offer {
+				position: absolute;
+				top: 45px;
+				bottom: 45px;
+				right: 0px;
+				left: 0px;
+				margin: auto;
+				width: 458px;
+				padding: 45px 0px 20px 0px;
+				background-color: rgba(162, 5, 1, 0.5);
+				@media screen and(max-width: 500px) {
+					width: 240px;
+					padding: 45px 0px 20px 0px;
+				}
+				h3 {
+					font: 400 normal 124px $FontSecond;
+					line-height: 73px;
+					@media screen and(max-width: 500px) {
+						font: 400 normal 70px Georgia, Arial, sans-serif;
+						line-height: 1;
+					}
+				}
+				span {
+					font-size: 42px;
+					@media screen and(max-width: 500px) {
+						font-size: 35px;
+					}
+				}
+				p {
+					margin-top: 15px;
+					font: 600 normal 25px $FontFirst;
+					font-weight: 600;
+					text-transform: uppercase;
+					@media screen and(max-width: 500px) {
+						font-size: 16px;
+					}
+				}
+			}
+		}
+		.main-title {
+			text-align: left;
+			p {
+				margin: 12px 0 20px 0;
+				font-size: 13px;
+			}
+			span {
+				text-transform: uppercase;
+				font-weight: 600;
+				margin-right: 5px;
+				margin-left: 5px;
+			}
+		}
+	}
+}

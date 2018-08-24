@@ -1,0 +1,56 @@
+extends ./templates/base
+
+block variables
+	- var classBody = 'article-page'
+	- var classWrapper = 'article'
+
+block title
+	title Статья
+
+block main
+	section.breadcrumb
+		.container
+			.breadcrumb__block
+				ul.clearfix
+					li
+						a(href='./') Главная
+					li
+						a(href='blog.html') Блог
+					li.
+						Новость
+	section.article
+		.container
+			.main-title
+				span Friday, January, 22. 2018
+				h2.
+					Phasellus et ante venenatis, viverra ex ut, placerat tellus. Nulla tempor
+			.article__banner(style='background-image: url(' + require("../components/images/banner-4.jpg") + ')')
+			.article__block
+				.article__box
+					p.
+						Mauris faucibus at sapien ut rhoncus. Ut scelerisque velit iaculis felis pellentesque, non venenatis tellus blandit. Pellentesque non eu metus posuere pulvinar non vitae ex. Phasellus et ante venenatis, viverra ex ut, placerat tellus. Nulla tempor odio massa id hendrerit nisi auctor sit amet. Fusce lobortis nisi a nisl imperdiet pellentesque. Nunc eget tincidunt nulla. Etiam eget ultrices diam, at volutpat diam. Pellentesque id velit convallis, ornare lacus id, facilisis odio. Nunc vitae libero eu lorem dignissim vulputate. Nulla tincidunt ligula ac turpis dapibus lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed suscipit tortor, in auctor sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+				.article__box
+					h3 Integer ut quam
+					p.
+						Vivamus et diam a leo ultricies laoreet. Nam at magna vulputate, lobortis orci ut, laoreet risus. Aliquam consequat scelerisque ero s a luctus. Fusce ante neque, iaculis non accumsan at, interdum non sem. Suspendisse elementum tortor arcu, dapibus egestas felis imperdiet varius. Maecenas feugiat libero lorem, sit amet eleifend leo eleifend id. Integer a metus tellus. Donec sed quam et diam bibendum fringilla in in tellus.
+				.article__box
+					h3 Integer ut quam
+					p.
+						Vivamus et diam a leo ultricies laoreet. Nam at magna vulputate, lobortis orci ut, laoreet risus. Aliquam consequat scelerisque ero s a luctus. Fusce ante neque, iaculis non accumsan at, interdum non sem. Suspendisse elementum tortor arcu, dapibus egestas felis imperdiet varius. Maecenas feugiat libero lorem, sit amet eleifend leo eleifend id. Integer a metus tellus. Donec sed quam et diam bibendum fringilla in in tellus.
+				.article__box
+					h3 Integer ut quam
+					p.
+						Vivamus et diam a leo ultricies laoreet. Nam at magna vulputate, lobortis orci ut, laoreet risus. Aliquam consequat scelerisque ero s a luctus. Fusce ante neque, iaculis non accumsan at, interdum non sem. Suspendisse elementum tortor arcu, dapibus egestas felis imperdiet varius. Maecenas feugiat libero lorem, sit amet eleifend leo eleifend id. Integer a metus tellus. Donec sed quam et diam bibendum fringilla in in tellus.
+			.article__pagination
+				.pagination-block
+					.pagination.loop-pagination
+						a.prev.page-numbers(href='#') Предыдущая новость
+							i.arrow.left
+						a.next.page-numbers(href='#') Следующая новость
+							i.arrow.right
+			.article__share
+				a(href="#").share share it!
+				ul.article__socials
+					each link, className in json.navSocials
+						li
+							a(href= link, class='fa fa-' + className)

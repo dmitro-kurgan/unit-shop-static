@@ -1,0 +1,55 @@
+.wrapper {
+	&--about {
+		.main-title {
+			padding: 40px 0;
+			@media #{$mobile} {
+				padding: 25px 0;
+			}
+		}
+	}
+}
+.about {
+	padding-bottom: 100px;
+	text-align: center;
+	@media #{$mobile} {
+		padding-bottom: 50px;
+	}
+	&__banner {
+		min-height: 670px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		@media #{$mobile} {
+			min-height: 400px;
+		}
+		@media screen and(max-width: 500px) {
+			min-height: 300px;
+		}
+	}
+	&__box {
+		text-align: center;
+		h4 {
+			padding: 35px 0;
+			font: 300 normal 33px $FontSecond;
+			@media #{$mobile} {
+				padding: 25px 0;
+			}
+		}
+		p {
+			font: 400 normal 21px $FontSecond;
+		}
+	}
+	a {
+		color: #757575;
+		font-family: $FontSecond;
+		font-weight: 400;
+		display: inline-block;
+		margin-top: 60px;
+		text-transform: uppercase;
+		text-decoration: underline;
+		@media #{$mobile} {
+			line-height: 1.5;
+			margin-top: 40px;
+		}
+	}
+}

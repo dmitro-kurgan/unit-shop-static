@@ -1,0 +1,121 @@
+.wrapper {
+	&--blog {
+		.main-title {
+			text-align: left;
+			padding: 35px 0px;
+			border-bottom: none;
+			h2, p {
+				max-width: 480px;
+			}
+			h2 {
+				margin: 0px;
+			}
+			p {
+				margin: 12px 0px 0px 0px;
+			}
+		}
+	}
+}
+.blog {
+	padding: 0px 0px 110px 0px;
+	@media #{$mobile} {
+		padding: 0px 0px 55px 0px;
+	}
+	.tab-content > .tab-pane {
+		overflow: initial;
+	}
+	.btn {
+		display: block;
+		margin: 80px auto 0px auto;
+		width: 271px;
+		height: 43px;
+		text-transform: uppercase;
+		font-weight: 600;
+		padding: 10px 12px;
+		@media #{$mobile} {
+		    margin: 40px auto 0px auto;
+		}
+	}
+	.nav-tabs {
+		padding: 0 0 15px 0;
+		li {
+			color: #989898;
+			font-size: 14px;
+			text-transform: uppercase;
+			@media #{$mobile} {
+				float: none;
+			}
+			a {
+				padding: 0px;
+				border: none;
+				&:hover, &:focus {
+					background-color: transparent;
+					color: #000;
+				}
+			}
+			&.active {
+				a {
+					color: #000;
+				}
+			}
+			& + li {
+				margin-left: 35px;
+				@media #{$mobile} {
+					margin-left: 0px;
+				}
+			}
+		}
+	}
+	&__box {
+		display: block;
+		margin-top: 40px;	
+		transition: $main_transition;
+		@media #{$mobile} {
+			max-width: 320px;
+			margin: 40px auto auto;
+		}
+		&:hover {
+			box-shadow: 0px 7px 15px 2px rgba(0, 0, 0, 0.08);
+		}
+	}
+	&__img {
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+	&__desc {
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+50,000000+100&0+1,0.5+100 */
+		background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 1%, rgba(0,0,0,0.25) 50%, rgba(0,0,0,0.5) 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 1%,rgba(0,0,0,0.25) 50%,rgba(0,0,0,0.5) 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 1%,rgba(0,0,0,0.25) 50%,rgba(0,0,0,0.5) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#80000000',GradientType=0 ); /* IE6-9 */
+		height: 212px;
+		line-height: 212px;
+		position: relative;
+		p {
+			font-size: 13px;
+			font-weight: 600;
+			line-height: initial;
+			display: inline-block;
+			vertical-align: bottom;
+			color: $main_color;
+			padding: 0px 20px 10px 20px;
+		}
+	}
+	&__info {
+		padding: 20px 20px 15px 20px;
+		border: 1px solid #e3e3e3;
+		p {
+			font-size: 12px;
+			font-weight: 300;
+			line-height: 1.5;
+			padding-bottom: 15px;
+			border-bottom: 1px solid #e3e3e3;
+		}
+		span {
+			margin-top: 12px;
+			display: block;
+			font: 700 normal 12px $FontSecond;
+			color: #6d6d6d;
+		}
+	}
+}

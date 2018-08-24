@@ -1,0 +1,191 @@
+.wrapper {
+	&--favorite {
+		/* bootstrap hack: fix content width inside hidden tabs */
+		.tab-content > .tab-pane,
+		.pill-content > .pill-pane {
+		    display: block;     /* undo display:none          */
+		    height: 0;          /* height:0 is also invisible */ 
+		    overflow: hidden;
+		}
+		.tab-content > .active,
+		.pill-content > .active {
+		    height: auto;       /* let the content decide it  */
+		} /* bootstrap hack end */
+		.cart-pg {
+			&__left {
+				width: 45%;
+				@media #{$desctop-lg} {
+					width: 40%;
+				}
+				@media #{$mobile} {
+					width: 100%;
+				}
+			}
+			&__right {
+				width: 30%;
+				@media #{$mobile} {
+					width: 100%;
+					text-align: left;
+				}
+				.to-card {
+					font-size: 11px;
+					font-weight: 600;
+					text-transform: uppercase;
+					text-decoration: none;
+					margin: 28px 0;
+					position: relative;
+					padding-left: 20px;
+					@media #{$tablet} {
+						margin: 20px 0;
+					}
+					&:before {
+						content: '';
+						position: absolute;
+						top: -1px;
+						left: 0px;
+						width: 11px;
+						height: 11px;
+						background: url(../images/cart.png)no-repeat center;
+						background-size: contain;
+					}
+				}
+				.del {
+					margin-top: 0px;
+				}
+			}
+			&__center {
+				width: 25%;
+				@media #{$desctop-lg} {
+					width: 30%;
+				}
+				@media #{$mobile} {
+					width: 100%;
+				}
+				.bootstrap-select {
+					height: 38px !important;
+					width: 215px !important;
+					@media #{$desctop} {
+						width: 190px !important;
+					}
+					@media #{$tablet} {
+						width: 135px !important;
+					}
+					@media #{$mobile} {
+						width: 170px !important;
+						display: block;
+						margin-left: 0;
+						margin-top: 7px;
+					}
+					button {
+						background-color: $main_color !important;
+						border: 2px solid #f0f0f0!important;
+						height: 38px !important;
+						width: 215px !important;
+						@media #{$desctop} {
+							width: 190px !important;
+						}
+						@media #{$tablet} {
+							width: 135px !important;
+						}
+						@media #{$mobile} {
+							width: 170px !important;
+						}
+						span {
+							font-size: 13px;
+							font-weight: 300;
+							text-transform: none;
+							@media #{$tablet} {
+								font-size: 12px;
+							    padding: 5px 0;
+							}
+							@media #{$mobile} {
+								font-size: 14px;
+							}
+						}
+					}
+				}
+				p {
+					font-size: 13px;
+					font-weight: 600;
+					display: inline-block;
+				}
+			}
+			&__box {
+				&-inner {
+					@media #{$mobile} {
+						display: block;
+						padding: 20px 0;
+					}
+				}
+			}
+			&__text {
+				@media #{$mobile} {
+					margin: 12px 0 12px 0;
+					max-width: 100%;
+				}
+			}
+			&__img {
+				width: 100px;
+				height: 145px;
+				line-height: 145px;
+				margin-right: 10px;
+			}
+			&__info {
+				@media #{$mobile} {
+					margin-top: 15px;
+				}
+			}
+			.quantity, .size {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				@media #{$mobile} {
+					display: block;
+				}
+			}
+			.quantity {
+				padding: 15px 0 0 0;
+				@media #{$mobile} {
+					padding: 5px 0 0 0;
+				}
+				&__box {
+					margin-top: 0px;
+					display: inline-block;
+					width: 215px;
+					@media #{$mobile} {
+						display: block;
+						width: 150px;
+						margin: 7px auto 0px 0px;
+					}
+				}
+				.plus, .minus {
+					width: 60px;
+					@media #{$desctop} {
+						width: 45px;
+					}
+					@media #{$tablet} {
+						width: 35px;
+						height: 35px;
+					    line-height: 31px;
+					}
+					@media #{$mobile} {
+						width: 45px;
+					}
+				}
+				.input {
+					width: 95px;
+					@media #{$desctop} {
+						width: 70px;
+					}
+					@media #{$tablet} {
+						width: 35px;
+						height: 35px;
+					}
+					@media #{$mobile} {
+						width: 60px;
+					}
+				}
+			}
+		}
+	}
+}

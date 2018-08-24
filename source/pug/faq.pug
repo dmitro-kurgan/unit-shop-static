@@ -1,0 +1,51 @@
+extends ./templates/base
+
+block variables
+	- var classBody = 'faq-page'
+	- var classWrapper = 'faq'
+
+block title
+	title FAQ
+
+block main
+	section.breadcrumb
+		.container
+			.breadcrumb__block
+				ul.clearfix
+					li
+						a(href='./') Главная
+					li.
+						О Unit Shop
+	section.faq
+		.container
+			.main-title
+				h2 часто задаваемые вопросы
+		.faq__block
+			.container
+				mixin faqBox(title)
+					.faq__box
+						h4= title
+						block
+				+faqBox('как выбрать страну доставки')
+					p.
+						Сайт автоматически выберет ваше текущее местоположение в качестве страны доставки по умолчанию. Вы можете изменить страну доставки и валюту, щелкнув раскрывающееся меню в левом верхнем углусайта или в навигационной ссылке на мобильном телефоне.
+				+faqBox('Lorem ipsum dolor sit')
+					p.
+						Nam auctor urna id ultrices dictum. Donec vitae mollis enim, ut vulputate dolor. Nulla auctor lorem convallis libero vehicula, a pharetra lectus maximus. Sed urna lectus, faucibus eleifend congue vel, rhoncus sed ex. Sed lobortis tortor sit amet consequat mattis. Sed molestie, est non ultrices faucibus, massa felis feugiat velit, ullamcorper mollis erat urna at tortor. Integer ornare eget dolor sit amet pulvinar. Nulla posuere elit vitae volutpat placerat. Ut mollis, est eleifend convallis sodales, arcu ligula porta eros, ac sollicitudin massa lacus vel felis. Mauris placerat urna ut dolor lacinia, sit amet sollicitudin libero blandit.
+				+faqBox('Suspendisse pharetra mi nec ligula commodo sagittis')
+					p +380(50) 09 67 543
+				+faqBox('Vestibulum justo')
+					p.
+						Vestibulum justo est, cursus a aliquet in, facilisis et diam. Phasellus vel tortor efficitur, egestas nulla in, imperdiet velit. Nunc eget pellentesque justo. Duis et massa nisi. Quisque pellentesque, ex fringilla condimentum pulvinar, nisi turpis tempor mauris, luctus tempus diam mi a est. Sed elit elit, facilisis vel nisi ac, consectetur finibus lorem. Vestibulum laoree orci sit amet libero pellentesque maximus. In tincidunt pellentesque imperdiet. Morbi vitae erat sapien. Pellentesque dui magna, gravida quis mollis vitae, sodales non lacus. Proin ac euismod lorem, vitae hendrerit arcu. Cras at turpis eleifend, ullamcorper erat id, blandit eros.
+				+faqBox('Integer ut quam tristique ')
+					p.
+						Integer ut quam tristique lorem iaculis semper vitae eget dolor. Donec justo arcu, viverra vel mattis ut, feugiat volutpat mi. Nunc eu mi cursus, mattis leo at, placerat quam. Cras mollis nibh vitae molestie malesuada. Maecenas condimentum augue elit, ac tempor ex malesuada venenatis. Sed sodales turpis non orci vehicula sollicitudin. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper eros feugiat, bibendum augue posuere, mollis nisl. Sed egestas scelerisque leo. Nam consectetur augue sit amet diam consequat gravida. Aliquam erat volutpat. Sed finibus ligula sapien, rhoncus malesuada ante suscipit vitae. Praesent ac nisl vel dui vehicula tempus non sed dolor.
+				+faqBox('Vestibulum justo')
+					p.
+						Vestibulum justo est, cursus a aliquet in, facilisis et diam. Phasellus vel tortor efficitur, egestas nulla in, imperdiet velit. Nunc eget pellentesque justo. Duis et massa nisi. Quisque pellentesque, ex fringilla condimentum pulvinar, nisi turpis tempor mauris, luctus tempus diam mi a est. Sed elit elit, facilisis vel nisi ac, consectetur finibus lorem. Vestibulum laoree orci sit amet libero pellentesque maximus. In tincidunt pellentesque imperdiet. Morbi vitae erat sapien. Pellentesque dui magna, gravida quis mollis vitae, sodales non lacus. Proin ac euismod lorem, vitae hendrerit arcu. Cras at turpis eleifend, ullamcorper erat id, blandit eros.
+				+faqBox('Integer ut quam tristique ')
+					p.
+						Integer ut quam tristique lorem iaculis semper vitae eget dolor. Donec justo arcu, viverra vel mattis ut, feugiat volutpat mi. Nunc eu mi cursus, mattis leo at, placerat quam. Cras mollis nibh vitae molestie malesuada. Maecenas condimentum augue elit, ac tempor ex malesuada venenatis. Sed sodales turpis non orci vehicula sollicitudin. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper eros feugiat, bibendum augue posuere, mollis nisl. Sed egestas scelerisque leo. Nam consectetur augue sit amet diam consequat gravida. Aliquam erat volutpat. Sed finibus ligula sapien, rhoncus malesuada ante suscipit vitae. Praesent ac nisl vel dui vehicula tempus non sed dolor.
+				
+
+				

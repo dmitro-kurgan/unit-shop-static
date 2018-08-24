@@ -1,0 +1,130 @@
+extends ./templates/base
+
+block variables
+	- var classBody = 'designers-page'
+	- var classWrapper = 'designers'
+
+block title
+	title Дизайнеры
+block headscript
+	script.
+		function addActive(elem) {
+		    var a = document.getElementsByClassName('word');
+		    event.preventDefault();
+		    for (i = 0; i < a.length; i++) {
+				a[i].classList.remove('active');
+		    }
+		    elem.classList.add('active')
+		}
+block main
+	section.breadcrumb
+		.container
+			.breadcrumb__block
+				ul.clearfix
+					li
+						a(href='./') Главная
+					li.
+						Дизайнеры A-Z
+	section.designers
+		.main-title
+			.container
+				h2 Дизайнеры A-Z
+		.designers__block
+			.container-content
+				- var alphabet = ['B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+				.designers__top
+					ul.clearfix
+						li
+							a(href="#A", class='word active', data-toggle='#A', id='wordA', onclick='addActive(this)') A
+						each name in alphabet
+							li
+								a(href="#" + name, class='word', data-toggle='#' + name, id='word' + name, onclick='addActive(this)')= name
+						li
+							a(href="#") 123
+				.designers__main
+					ul.designers__main-list.clearfix
+						- var designers = require('../data/content.json')
+						mixin designers(word)
+							div(class='designers__names', id= word)
+								h4= word
+								ul
+									block
+						li
+							div(class='designers__names active', id='A')
+								h4 A
+								ul
+									each link, name in designers.designersA
+										li
+											a(href= link)= name
+							+designers('B')
+								each link, name in designers.designersB
+									li
+										a(href= link)= name
+							+designers('C')
+								each link, name in designers.designersC
+									li
+										a(href= link)= name
+						li
+							+designers('D')
+								each link, name in designers.designersD
+									li
+										a(href= link)= name
+							+designers('E')
+								each link, name in designers.designersE
+									li
+										a(href= link)= name
+
+							+designers('F')
+								each link, name in designers.designersF
+									li
+										a(href= link)= name
+							+designers('G')
+							+designers('H')
+								each link, name in designers.designersH
+									li
+										a(href= link)= name
+						li
+							+designers('I')
+								each link, name in designers.designersA
+									li
+										a(href= link)= name
+							+designers('J')
+								each link, name in designers.designersB
+									li
+										a(href= link)= name
+							+designers('K')
+								each link, name in designers.designersC
+									li
+										a(href= link)= name
+						li
+							+designers('L')
+								each link, name in designers.designersD
+									li
+										a(href= link)= name
+							+designers('M')
+							+designers('N')
+							+designers('O')
+								each link, name in designers.designersF
+									li
+										a(href= link)= name
+							+designers('P')
+							+designers('Q')
+							+designers('R')
+								each link, name in designers.designersA
+									li
+										a(href= link)= name
+						li
+							+designers('S')
+								each link, name in designers.designersB
+									li
+										a(href= link)= name
+							+designers('T')
+								each link, name in designers.designersC
+									li
+										a(href= link)= name
+							+designers('U')
+							+designers('V')
+							+designers('W')
+							+designers('X')
+							+designers('Y')
+							+designers('Z')

@@ -1,0 +1,70 @@
+extends ./templates/base
+
+block variables
+	- var classBody = 'contact-page'
+	- var classWrapper = 'contact'
+
+block title
+	title Связаться с нами
+
+block main
+	section.breadcrumb
+		.container
+			.breadcrumb__block
+				ul.clearfix
+					li
+						a(href='./') Главная
+					li.
+						Связаться с нами
+	section.contact
+		.container
+			.main-title
+				h2 Связаться с нами
+		.contact__block
+			.container
+				.row
+					.col-md-8
+						.contact__left
+							h3 Контакт с unitshop.ua
+							form
+								.form-group
+									input.form-control(type='text', name='name', id='name', placeholder='Имя и фамилия')
+								.form-group
+									input.form-control(type='text', name='email', id='email', placeholder='E-mail')
+								.form-group
+									input.form-control(type='text', name='tel', id='tel', placeholder='Номер телефона')
+								.form-group
+									input.form-control(type='text', name='theme', id='theme', placeholder='Тема сообщения')
+								.form-group
+									textarea.form-control(name='msg', id='msg', placeholder='Сообщение')
+								button(type='submit').btn.btn-black Отправить
+					.col-md-4
+						.contact__right
+							h3 Контактная информация
+							p.
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus scelerisque hendrerit eros, eget posuere nisl condimentum
+							.contact__address
+								span Адрес
+								ul
+									li Keas 69 Str.
+									li 15234, Chalandri
+									li Athens,
+									li Greece
+							.contact__line
+								span Горячая линия
+								ul
+									li
+										a(href="tel:+302106019311") +30-2106019311 (landline)
+									li
+										a(href="tel:+306977664062") +30-6977664062 (mobile phone)
+							.contact__email
+								span Контактный E-mail
+								ul
+									li
+										a(href="mailto:unitshop@gmail.com") unitshop@gmail.com
+							.contact__hours
+								span Время работы
+								ul
+									li Линии открыты с понедельника по пятницу,
+									li с 10:00 утра до 9:00 вечера
+									li по киевскому времени

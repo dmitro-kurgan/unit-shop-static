@@ -1,0 +1,25 @@
+.wrapper {
+	&--favorite {
+		.cart-pg {
+			&__center {
+				.bootstrap-select {
+					height: 45px !important;
+					button {
+						background-color: $main_color !important;
+						border: 1px solid #000 !important;
+						height: 45px !important;
+						span {
+							font-size: 17px;
+							font-weight: 600;
+							text-transform: none;
+						}
+					}
+				}
+				p {
+					font-size: 13px;
+					font-weight: 600;
+				}
+			}
+		}
+	}
+}

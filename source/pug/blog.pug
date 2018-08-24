@@ -1,0 +1,66 @@
+extends ./templates/base
+
+block variables
+	- var classBody = 'blog-page'
+	- var classWrapper = 'blog'
+
+block title
+	title Блог
+
+block main
+	section.breadcrumb
+		.container
+			.breadcrumb__block
+				ul.clearfix
+					li
+						a(href='./') Главная
+					li.
+						О Unit Shop
+	section.blog
+		.container
+			.main-title
+				h2 BLOG, Fusce metus & turp metus
+				p.
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis tortor vulputate semper henderit. Mauris faucibus nunc posuere
+			.blog__block
+				.blog__nav
+					ul.nav.nav-tabs
+						mixin navTabs(className, link, name)
+							li(class= className)
+								a(href= link, data-toggle='tab')= name
+						+navTabs('active', '#all', 'all')
+						+navTabs(' ', '#home-living', 'home & living')
+						+navTabs(' ', '#fashion', 'fashion')
+						+navTabs(' ', '#brandshop', 'brandshop')
+						+navTabs(' ', '#lorem', 'lorem ipsum')
+				.tab-content#tab-content
+					mixin blogBox(link, img, desc, info, data)
+						li.col-md-3.col-sm-6
+							a(href='' + link + '.html').blog__box
+								.blog__img(style='background-image: url(' + require("../components/images/blog-" + img + '.jpg')+ ')')
+									.blog__desc
+										p= desc
+								.blog__info
+									p= info
+									span= data
+					#all.tab-pane.fade.in.active
+						mixin blogUl
+							ul.row
+								+blogBox('article', '1', ' Lorem ipsum dolor sit amet, consectetur adip', 'Lorem ipsum dolor sit amet, consectetur dipiscing elit. Mauris sagittis tortor vulputate semper hendre rit. Mauris faucibus nunc posu ere tempor molestie. Phasellus cursus tortor in diam fermentum sodales. In sodales est nec mi vehicula consequat. Integer aenean faucibus nibh non purus congue.', 'Friday, January, 22. 2018')
+								+blogBox('article', '2', ' Lorem ipsum dolor sit amet, consectetur adip', 'Lorem ipsum dolor sit amet, consectetur dipiscing elit. Mauris sagittis tortor vulputate semper hendre rit. Mauris faucibus nunc posu ere tempor molestie. Phasellus cursus tortor in diam fermentum sodales. In sodales est nec mi vehicula consequat. Integer aenean faucibus nibh non purus congue.', 'Friday, January, 22. 2018')
+								+blogBox('article', '3', ' Lorem ipsum dolor sit amet, consectetur adip', 'Lorem ipsum dolor sit amet, consectetur dipiscing elit. Mauris sagittis tortor vulputate semper hendre rit. Mauris faucibus nunc posu ere tempor molestie. Phasellus cursus tortor in diam fermentum sodales. In sodales est nec mi vehicula consequat. Integer aenean faucibus nibh non purus congue.', 'Friday, January, 22. 2018')
+								+blogBox('article', '4', ' Lorem ipsum dolor sit amet, consectetur adip', 'Lorem ipsum dolor sit amet, consectetur dipiscing elit. Mauris sagittis tortor vulputate semper hendre rit. Mauris faucibus nunc posu ere tempor molestie. Phasellus cursus tortor in diam fermentum sodales. In sodales est nec mi vehicula consequat. Integer aenean faucibus nibh non purus congue.', 'Friday, January, 22. 2018')
+								+blogBox('article', '5', ' Lorem ipsum dolor sit amet, consectetur adip', 'Lorem ipsum dolor sit amet, consectetur dipiscing elit. Mauris sagittis tortor vulputate semper hendre rit. Mauris faucibus nunc posu ere tempor molestie. Phasellus cursus tortor in diam fermentum sodales. In sodales est nec mi vehicula consequat. Integer aenean faucibus nibh non purus congue.', 'Friday, January, 22. 2018')
+								+blogBox('article', '6', ' Lorem ipsum dolor sit amet, consectetur adip', 'Lorem ipsum dolor sit amet, consectetur dipiscing elit. Mauris sagittis tortor vulputate semper hendre rit. Mauris faucibus nunc posu ere tempor molestie. Phasellus cursus tortor in diam fermentum sodales. In sodales est nec mi vehicula consequat. Integer aenean faucibus nibh non purus congue.', 'Friday, January, 22. 2018')
+								+blogBox('article', '7', ' Lorem ipsum dolor sit amet, consectetur adip', 'Lorem ipsum dolor sit amet, consectetur dipiscing elit. Mauris sagittis tortor vulputate semper hendre rit. Mauris faucibus nunc posu ere tempor molestie. Phasellus cursus tortor in diam fermentum sodales. In sodales est nec mi vehicula consequat. Integer aenean faucibus nibh non purus congue.', 'Friday, January, 22. 2018')
+								+blogBox('article', '8', ' Lorem ipsum dolor sit amet, consectetur adip', 'Lorem ipsum dolor sit amet, consectetur dipiscing elit. Mauris sagittis tortor vulputate semper hendre rit. Mauris faucibus nunc posu ere tempor molestie. Phasellus cursus tortor in diam fermentum sodales. In sodales est nec mi vehicula consequat. Integer aenean faucibus nibh non purus congue.', 'Friday, January, 22. 2018')
+							a(href="#").btn.btn-black Загрузить еще
+						+blogUl
+					#home-living.tab-pane.fade.in
+						+blogUl
+					#fashion.tab-pane.fade.in
+						+blogUl
+					#brandshop.tab-pane.fade.in
+						+blogUl
+					#lorem.tab-pane.fade.in
+						+blogUl

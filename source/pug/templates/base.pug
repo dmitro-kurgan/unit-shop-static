@@ -1,0 +1,53 @@
+- var json = require('../data/nav.json')
+
+block variables
+
+doctype html
+html(lang="en")
+	head
+		block title
+			title Index
+		meta(charset="UTF-8")
+		meta(name="viewport", content="initial-scale=1.0, width=device-width, user-scalable=no")
+		block headscript
+	body(class='' + classBody)
+		div(class='wrapper wrapper--' + classWrapper)
+			block header
+				include ../modules/header
+			.content
+				block main
+			block footer
+				include ../modules/footer
+			#cartWindow.cart-window-window.modal.fade(role='dialog')
+				.container
+					.modal-dialog.cart-window__dialog
+						.modal-content.cart-window__content
+							.modal-header.cart-window__header
+								h4.cart-window__title Корзина
+									span.count
+							.modal-body.cart-window__body
+								.cart-window__total
+									p Всего к оплате
+									span#total
+								a(href="registration.html").btn.btn-black Оформить заказ
+								ul.cart-window__goods
+									mixin cartBox(img, name, size, quantity, price)
+										li.cart-window__box
+											.cart-window__img
+												img(src=require("../components/images/" + img + ".png"), alt= img)
+											.cart-window__info
+												h5.cart-window__name= name
+												p.cart-window__size Размер:
+													span= size
+												p.cart-window__quantity Количество:
+													span= quantity
+											.cart-window__price
+												p £
+													span.price= price
+											a(href="#").cart-window__del-box
+									- var cartBox = ['800', '600', '1200']
+									each price in cartBox
+										+cartBox('product-1', 'dorateymur', 'S', '1', price)
+							.modal-footer.cart-window__footer
+								a(href="#", data-dismiss='modal') Продолжить покупки
+		block script

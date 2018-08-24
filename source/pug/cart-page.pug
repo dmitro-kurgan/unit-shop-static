@@ -1,0 +1,84 @@
+extends ./templates/base
+
+block variables
+	- var classBody = 'cart-page'
+	- var classWrapper = 'cart-page'
+
+block title
+	title Мужская одежда
+
+block main
+	section.breadcrumb
+		.container
+			.breadcrumb__block
+				ul.clearfix
+					li
+						a(href='./') Главная
+					li
+						a(href='./') Для него
+					li.
+						Одежда
+	section.cart-pg
+			.main-title
+				.container
+					h2 в Вашей корзине - 2 товара
+					a(href="pay.html").btn Перейти к оплате
+			.cart-pg__block
+				.container
+					.row
+						.col-md-8
+							.cart-pg__goods
+								mixin cartBox(img, alt, name, text, color, size, price, code)
+									.cart-pg__box.clearfix
+										.cart-pg__box-inner
+											.cart-pg__left
+												a(href="#").close
+												.cart-pg__img
+													img(src=require("../components/images/" + img + ".png"), alt= alt)
+												.cart-pg__info
+													h4.cart-pg__name= name
+													p.cart-pg__text= text
+													p.cart-pg__color Цвет:
+														span= color
+													p.cart-pg__size Размер:
+														span= size
+													p.cart-pg__price= price
+											.cart-pg__right
+												.cart-pg__info
+													p.cart-pg__code Код:
+														span= code
+													.quantity
+														p Количество
+														.quantity__box
+															span.plus +
+															input.input(value='1')
+															span.minus -
+													a(href="favorite.html").favor Перейти в список избранных товаров
+													a(href="#").del Удалить товар
+								+cartBox('product-1', 'product 1', 'Dorateymur', 'Gucci Cities print sweatshirt Ae tye-dye', 'Grey', 'XS', '£ 1200', '1234567890')
+								+cartBox('product-1', 'product 1', 'Dorateymur', 'Gucci Cities print sweatshirt Ae tye-dye', 'Grey', 'XS', '£ 1200', '1234567890')
+						.col-md-4
+							.cart-pg__order
+								.cart-pg__order-inner
+									.cart-pg__rewards
+										h5 Награды + Акции
+										a#promoClick(href="#") Введите промо код
+										form
+											input.form-control#promoInput(type='text', name='promo', placeholder='Введите ваш промо код')
+									.cart-pg__total
+										h5 Итого
+										div
+											p Итого (2 товара):
+											span £ 2400
+										h6 Бесплатный сервис возврата товара
+										p.
+											Не уверены в своём выборе? Вам не стоит переживать по этому поводу, так как теперь Вы можете воспользоваться бесплатной услугой возврата на все товары.
+										a(href="#") Подробнее
+									.cart-pg__total-price
+										div
+											p Всего к оплате:
+											span £ 2400
+										p Все цены включают в себя пошлины и налоги
+								.cart-pg__btns
+									a(href="pay.html").btn.go-to Перейти к оплате
+									a(href="category.html").btn.continue Продолжить покупку

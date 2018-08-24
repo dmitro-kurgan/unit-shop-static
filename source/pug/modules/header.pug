@@ -1,0 +1,125 @@
+header
+	.header
+		.header__content
+			.header__top
+				.container
+					p.
+						БЕСПЛАТНАЯ ЭКСПРЕСС-ПОСТАВКА НА ЗАКАЗЫ ОТ £ 250
+			.header__main
+				.container
+					.header__main-top
+						.header__hamburger#hamburger
+							span.top
+							span.mid
+							span.bottom
+						.header__main-left
+							ul.clearfix
+								li
+									a(href="#") United Kingdom, GBP
+								li
+									a(href="#") Русский
+						.header__main-right
+							ul.clearfix
+								li
+									a(href="enter.html") Войти / Регистрация
+								li
+									a(href="favorite.html") Избранное
+								li
+									a(href="#", data-toggle='modal', data-target='#cartWindow').cart Корзина
+										span.cart-quantity.count
+					.header__logo
+						a(href="./")
+			.header__bottom#headerMenu
+				.container
+					.header__bottom-content
+						.header__close#close
+							span.top
+							span.mid
+							span.bottom
+						.header__main.header__main-mobile
+							ul.clearfix
+						.header__bottom-right.header__search-mobile
+						.header__bottom-left
+							ul.nav.nav-tabs
+								mixin navTabs(className, link, name)
+									li(class= className)
+										a(href= link, data-toggle='tab')= name
+								+navTabs('active', '#him', 'Для него')
+								+navTabs(' ', '#her', 'Для нее')
+								+navTabs(' ', '#children', 'Для детей')
+						.header__bottom-center
+							.tab-content.clearfix
+								#him.tab-pane.fade.in.active
+									ul.header-menu.clearfix
+										each link, title in json.navPages
+											li(class='header-menu__list')
+												a(href="" + link, class='header-menu__link')= title
+										li.header-menu__list.menu-item-has-children
+											a(href="#").header-menu__link Одежда
+											.sub-menu
+												ul.sub-menu__content
+													mixin brends(link, name)
+														li
+															a(href= link)= name
+													li.sub-menu__list
+														ul.sub-menu__brand
+															li
+																h5 Бренды
+															each link, title in json.brands
+																li
+																	a(href= link)= title
+															li
+																a(href="#").show-all Смотреть все
+													li.sub-menu__list
+														ul.sub-menu__category
+															li
+																h5 Категории
+															each link, title in json.categories
+																li
+																	a(href= link)= title
+													li.sub-menu__list.sub-menu__trend
+														h5 Сейчас в тренде
+														mixin trendBox(link, img, hidden, name, text, price)
+															li
+																a(href= link).popular__box
+																	.popular__img
+																		img(src=require('../components/images/' + img + '.png'), class='popular__pic', alt='pic')
+																		img(src=require('../components/images/' + hidden + '.png'), class='popular__hidden', alt='pic')
+																	.popular__info
+																		h3.popular__name= name
+																		.popular__text
+																			p= text
+																		p.popular__price= price
+														ul.clearfix
+															+trendBox('product-pg.html', 'popular-1', 'popular-2', 'dorateymur', 'Gucci Cities print sweatshirt', '£ 1200')
+															+trendBox('product-pg.html', 'popular-3', 'popular-2', 'dorateymur', 'Gucci Cities print sweatshirt', '£ 1200')
+															+trendBox('product-pg.html', 'popular-4', 'popular-2', 'dorateymur', 'Gucci Cities print sweatshirt', '£ 1200')
+										each link, title in json.navPages2
+											li(class='header-menu__list')
+												a(href="" + link, class='header-menu__link')= title
+								#her.tab-pane.fade.in
+									mixin headerMenu(link, name)
+										li.header-menu__list
+											a(href= link).header-menu__link= name
+									ul.header-menu
+										+headerMenu('#', 'Новинки')
+										+headerMenu('#', 'Дизайнеры')
+										+headerMenu('#', 'Одежда')
+										+headerMenu('#', 'Обувь')
+										+headerMenu('#', 'Аксессуары')
+										+headerMenu('#', 'Статьи')
+										+headerMenu('#', 'Распродажа')
+								#children.tab-pane.fade.in
+									ul.header-menu
+										+headerMenu('#', 'Новинки')
+										+headerMenu('#', 'Дизайнеры')
+										+headerMenu('#', 'Одежда')
+										+headerMenu('#', 'Обувь')
+										+headerMenu('#', 'Аксессуары')
+										+headerMenu('#', 'Статьи')
+										+headerMenu('#', 'Распродажа')
+						.header__bottom-right.header__search
+							form
+								.form-group
+									input.form-control(type='search', placeholder='ПОИСК')#searchInput
+									button(type='submit').fa.fa-search#searchIcon

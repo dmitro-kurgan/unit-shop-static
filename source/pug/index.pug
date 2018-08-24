@@ -1,0 +1,95 @@
+extends ./templates/base
+
+block variables
+	- var classBody = 'index-page'
+	- var classWrapper = 'index'
+
+block title
+	title Главная
+
+block main
+	section.banner
+		.slider.slick-banner
+			mixin slickBanner(img)
+				div
+					.slick-banner__box
+						div(class='slick-banner__img', style='background-image: url(' + require("../components/images/" + img) + ')')
+							.slick-banner__inner
+			+slickBanner('banner-1.jpg')
+			+slickBanner('banner-2.jpg')
+			+slickBanner('banner-3.jpg')
+			+slickBanner('banner-1.jpg')
+			+slickBanner('banner-2.jpg')
+			+slickBanner('banner-3.jpg')
+		.banner__inner
+			h1.
+				Find us chasing the sun
+			p.
+				Former Oscar winners looking fresh
+			a(href="fashion.html").arrow-link Discover more
+	section.adv-block
+		.container
+			.adv-block__blk
+				ul.row
+					li.col-sm-4
+						mixin advBlockSmall(link, img, name, text, link2 ,link2Name, className)
+							a(href= link, class='adv-block__box small', style='background-image: url(' + require('../components/images/' + img + '.jpg') + ')')
+								div(class='adv-block__info' + ' ' + className)
+									h3.adv-block__name= name
+									.adv-block__text
+										p= text
+									object
+										a(href= link2, class='arrow-link')= link2Name
+						+advBlockSmall('category.html', 'adv-block-4', 'winning looks', 'Former Oscar winners looking fresh, via Benjamin', 'category.html', 'discover more', '')
+						+advBlockSmall('category.html', 'adv-block-5', 'winning looks', 'Former Oscar winners looking fresh, via Benjamin', 'category.html', 'discover more', '')
+					mixin advBlock(link, img, name, text, link2 ,link2Name, className)
+						li.col-sm-4
+							a(href= link, class='adv-block__box', style='background-image: url(' + require('../components/images/' + img + '.jpg') + ')')
+								div(class='adv-block__info' + ' ' + className)
+									h3.adv-block__name= name
+									.adv-block__text
+										p= text
+									object
+										a(href= link2, class='arrow-link')= link2Name
+					+advBlock('category.html', 'adv-block-6', 'winning looks', 'Former Oscar winners looking fresh, via Benjamin', 'category.html', 'watch now', '')
+					+advBlock('category.html', 'adv-block-7', 'incoming', 'Former Oscar winners looking fresh, via Benjamin', 'category.html', 'watch now', 'black')
+	section.popular
+		.popular__content
+			.popular__links
+				a(href="#").arrow-link Магазин одежды
+				a(href="#").arrow-link Аксессуары
+			h2 Популярные товары
+			p.
+				Former Oscar winners looking fresh, via benjamin
+			.popular__block.clearfix
+				mixin popularBox(link, img, hidden, name, text, price)
+					a(href= link).popular__box
+						.popular__img
+							img(src=require('../components/images/' + img + '.png'), class='popular__pic', alt='pic')
+							img(src=require('../components/images/' + hidden + '.png'), class='popular__hidden', alt='pic')
+						.popular__info
+							h3.popular__name= name
+							.popular__text
+								p= text
+							p.popular__price= price
+				+popularBox('product-pg.html', 'popular-1', 'popular-2', 'dorateymur', 'Gucci Cities print sweatshirt', '£ 1200')
+				+popularBox('product-pg.html', 'popular-3', 'popular-2', 'dorateymur', 'Gucci Cities print sweatshirt', '£ 1200')
+				+popularBox('product-pg.html', 'popular-4', 'popular-2', 'dorateymur', 'Gucci Cities print sweatshirt', '£ 1200')
+				+popularBox('product-pg.html', 'popular-5', 'popular-2', 'dorateymur', 'Gucci Cities print sweatshirt', '£ 1200')
+				+popularBox('product-pg.html', 'popular-6', 'popular-2', 'dorateymur', 'Gucci Cities print sweatshirt', '£ 1200')
+	section.adv-block2
+		.container
+			.adv-block2__blk
+				ul.row
+					mixin advBlock2(link, img, name, text, link2, className)
+						li.col-sm-4
+							a(href= link, class='adv-block2__box', style='background-image: url(' + require('../components/images/' + img + '.jpg') + ')')
+								div(class='adv-block2__info' + ' ' + className)
+									h3.adv-block2__name= name
+									.adv-block2__text
+										p= text
+									object
+										a(href= link2, class='arrow-link') Shop now
+					+advBlock2('category.html', 'adv-block-1', 'a shoe in', 'Former Oscar winners looking fresh, via Benjamin', 'category.html', '')
+					+advBlock2('category.html', 'adv-block-2', 'a shoe in', 'Former Oscar winners looking fresh, via Benjamin', 'category.html', '')
+					+advBlock2('category.html', 'adv-block-3', 'a shoe in', 'Former Oscar winners looking fresh, via Benjamin', 'category.html', 'black')

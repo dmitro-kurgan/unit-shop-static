@@ -1,0 +1,39 @@
+.wrapper {
+	&--faq {
+		.main-title {
+			border-bottom: none;
+			padding: 0px 0px 40px 0px;
+		}
+	}
+}
+.faq {
+	padding-bottom: 100px;
+	@media #{$tablet} {
+		padding-bottom: 50px;
+	}
+	&__box {
+		h4 {
+			padding: 0px 0px 10px 0px;
+			font-size: 14px;
+			font-weight: 700;
+			border-bottom: 1px solid #e9e9e9;
+			text-transform: uppercase;
+		}
+		p {
+			font-size: 17px;
+			font-weight: 600;
+			margin-bottom: 30px;
+			margin-top: 12px;
+			line-height: 1.25;
+		}
+	}
+	a {
+		color: #757575;
+		font-family: $FontSecond;
+		font-weight: 400;
+		display: inline-block;
+		margin-top: 60px;
+		text-transform: uppercase;
+		text-decoration: underline;
+	}
+}

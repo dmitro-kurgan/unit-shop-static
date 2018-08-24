@@ -1,0 +1,81 @@
+extends ./templates/base
+
+block variables
+	- var classBody = 'favorite'
+	- var classWrapper = 'favorite'
+
+block title
+	title Избранное
+
+block main
+	section.breadcrumb
+		.container
+			.breadcrumb__block
+				ul.clearfix
+					li
+						a(href='./') Главная
+					li.
+						Избранное
+	section.cart-pg
+			.main-title
+				.container
+					h2 Ваши избранные товары
+					a(href="#").btn Переместить в корзину
+			.cart-pg__block
+				.container
+					.cart-pg__goods
+						mixin cartBox(img, alt, name, text, color, size, price, code)
+							.cart-pg__box.clearfix
+								.cart-pg__box-inner
+									.cart-pg__left
+										a(href="#").close
+										.cart-pg__img
+											img(src=require("../components/images/" + img + ".png"), alt= alt)
+										.cart-pg__info
+											h4.cart-pg__name= name
+											p.cart-pg__text= text
+											p.cart-pg__price= price
+									.cart-pg__center
+										.size
+											p Размер:
+											select.selectpicker.custom-picker(title='Выберите размер', required)
+												option(value='50') 50
+												option(value='52') 52
+												option(value='54') 54
+												option(value='56') 56
+										.quantity
+											p Количество:
+											.quantity__box
+												span.plus +
+												input.input(value='1')
+												span.minus -
+									.cart-pg__right
+										.cart-pg__info
+											p.cart-pg__code Код:
+												span= code
+											a(href="#").to-card Переместить в корзину
+											a(href="#").del Удалить товар
+						+cartBox('product-1', 'product 1', 'Dorateymur', 'Gucci Cities print sweatshirt Ae tye-dye', 'Grey', 'XS', '£ 1200', '1234567890')
+						+cartBox('product-1', 'product 1', 'Dorateymur', 'Gucci Cities print sweatshirt Ae tye-dye', 'Grey', 'XS', '£ 1200', '1234567890')
+			.container-content
+				include ./modules/recomend
+			.product-pg__bottom
+				.container-content
+					ul.row
+						li.col-sm-4
+							div
+								h6 Возврат
+								p Бесплатный возврат в течении 28 дней
+								a(href="#") Подробнее
+						li.col-sm-4
+							div
+								h6 доставка
+								p.
+									Узнайте, какие варианты доставки доступны для вашего пункта назначения
+								a(href="#") Читать
+						li.col-sm-4
+							div
+								h6 персональная покупка
+								p.
+									Нужна помощь с вашим заказом или советом ?
+								a(href="#") Связаться с нами

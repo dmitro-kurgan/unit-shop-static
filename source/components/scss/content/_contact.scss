@@ -1,0 +1,99 @@
+.wrapper {
+	&--contact {
+		.main-title {
+			border-bottom: none;
+			padding: 0px 0px 40px 0px;
+			@media #{$mobile} {
+				padding: 0px 0px 20px 0px;
+			}
+		}
+	}
+}
+.contact {
+	padding-bottom: 90px;
+	@media #{$mobile} {
+		padding-bottom: 60px;
+	}
+	&__left, &__right {
+		border: 2px solid #e8e8e8;
+		min-height: 550px;
+		@media #{$tablet} {
+			min-height: initial;
+		}
+		h3 {
+			font-size: 17px;
+			font-weight: 700;
+			text-transform: uppercase;
+			margin-bottom: 30px;
+			@media #{$desctop} {
+				margin-bottom: 12px;
+			}
+		}
+	}
+	&__left {
+		padding: 30px 25px 20px 25px;
+		@media #{$desctop} {
+			padding: 20px 25px;
+		}
+		@media #{$mobile} {
+			padding: 20px;
+		}
+		.btn {
+			width: 271px;
+			height: 38px;
+			text-transform: uppercase;
+			@media screen and(max-width: 400px) {
+				width: 100%;
+			}
+		}
+	}
+	&__right {
+		padding: 30px 20px 20px 20px;
+		@media #{$desctop} {
+			padding: 20px;
+		}
+		@media #{$tablet} {
+			margin-top: 40px;
+		}
+		p {
+			font-size: 15px;
+			line-height: 1.15;
+			@media #{$desctop} {
+				line-height: 1.25;
+				font-size: 13px;
+			}
+		}
+		span {
+			display: block;
+			font-size: 17px;
+			font-weight: 600;
+			color: #616161;
+			margin: 25px 0 7px 0;
+		}
+		li {
+			font-size: 15px;
+			font-weight: 600;
+			line-height: 1.15;
+		}
+	}
+	form {
+		input, textarea {
+			border: 1px solid #e7e7e7;
+			border-radius: 0px;
+			box-shadow: none;
+			@include addPrefixPlaceholder(placeholder, color, #282828);
+			@include addPrefixPlaceholder(placeholder, font-size, 13px);
+			@include addPrefixPlaceholder(placeholder, font-weight, 600);
+		}
+		input {
+			height: 46px;
+		}
+		textarea {
+			min-height: 132px;
+			resize: none;
+		}
+		button {
+			margin-top: 10px;
+		}
+	}
+}
